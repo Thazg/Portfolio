@@ -12,18 +12,11 @@ export default function BlogPreview() {
   return (
     <section className="py-16 w-full max-w-[1200px] px-5 md:px-12">
       <Reveal>
-        <div className="mb-8 flex flex-col md:flex-row md:items-end justify-between gap-6">
-          <div>
-            <h2 className="text-2xl md:text-3xl font-bold font-heading mb-4 text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent w-fit">
-              Latest Articles
-            </h2>
-            <div className="w-20 h-1.5 bg-primary rounded-full" />
-          </div>
-          <Button variant="ghost" className="text-primary hover:text-primary/80 group text-base" asChild>
-            <Link href="#">
-              View All Posts <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-2 transition-transform" />
-            </Link>
-          </Button>
+        <div className="mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold font-heading mb-4 text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent w-fit">
+            Latest Articles
+          </h2>
+          <div className="w-20 h-1.5 bg-primary rounded-full" />
         </div>
       </Reveal>
 
@@ -50,7 +43,7 @@ export default function BlogPreview() {
                 </CardTitle>
               </CardHeader>
               
-              <CardFooter className="pt-0 pb-6">
+              <CardFooter className="pt-4 pb-5 border-t border-border/50">
                 <Button variant="link" className="p-0 text-primary hover:text-primary/80 text-base font-medium" asChild>
                   <Link href={post.link}>
                     Read More <ArrowRight className="w-4 h-4 ml-1.5" />

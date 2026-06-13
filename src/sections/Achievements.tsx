@@ -33,7 +33,7 @@ function AnimatedCounter({ value }: { value: number }) {
 
 export default function Achievements() {
   return (
-    <section className="py-16 w-full max-w-[1200px] px-5 md:px-12">
+    <section id="achievements" className="py-16 w-full max-w-[1200px] px-5 md:px-12">
       <Reveal>
         <div className="mb-8 flex flex-col items-center text-center">
           <h2 className="text-2xl md:text-3xl font-bold font-heading mb-4 text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent w-fit">
