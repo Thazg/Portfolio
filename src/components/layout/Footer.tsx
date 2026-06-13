@@ -5,11 +5,11 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="w-full border-t border-border bg-card/50 py-12 mt-20">
-      <div className="max-w-[1200px] mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+    <footer className="w-full border-t border-border bg-card/50 py-8 mt-10">
+      <div className="max-w-[1200px] mx-auto px-5 flex flex-col md:flex-row justify-between items-center gap-6">
         <div className="flex flex-col items-center md:items-start gap-2">
-          <Link href="/" className="text-2xl font-bold font-heading text-primary">
-            JD.
+          <Link href="/" className="text-lg font-bold font-heading text-primary">
+            NTT.
           </Link>
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} {PORTFOLIO_DATA.name}. All rights reserved.

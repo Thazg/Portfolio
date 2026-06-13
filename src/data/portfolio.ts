@@ -52,7 +52,6 @@ export const PORTFOLIO_DATA = {
       image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200",
       tech: ["Python", "LangChain", "OpenAI", "React", "FastAPI"],
       github: "https://github.com",
-      demo: "https://example.com",
     },
     {
       title: "Deep Vision Analyzer",
@@ -60,7 +59,6 @@ export const PORTFOLIO_DATA = {
       image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200",
       tech: ["Python", "PyTorch", "OpenCV", "TensorRT", "C++"],
       github: "https://github.com",
-      demo: "https://example.com",
     },
     {
       title: "Scalable RAG System",
@@ -68,7 +66,6 @@ export const PORTFOLIO_DATA = {
       image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200",
       tech: ["TypeScript", "Next.js", "Pinecone", "OpenAI", "Node.js"],
       github: "https://github.com",
-      demo: "https://example.com",
     },
     {
       title: "Predictive Healthcare Analytics",

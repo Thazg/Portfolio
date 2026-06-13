@@ -33,27 +33,27 @@ function AnimatedCounter({ value }: { value: number }) {
 
 export default function Achievements() {
   return (
-    <section className="py-32 w-full max-w-[1400px] px-6 md:px-12">
+    <section className="py-16 w-full max-w-[1200px] px-5 md:px-12">
       <Reveal>
-        <div className="mb-16 flex flex-col items-center text-center">
-          <h2 className="text-4xl md:text-5xl font-bold font-heading mb-6 text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent w-fit">
+        <div className="mb-8 flex flex-col items-center text-center">
+          <h2 className="text-2xl md:text-3xl font-bold font-heading mb-4 text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent w-fit">
             Achievements
           </h2>
-          <div className="w-24 h-1.5 bg-primary rounded-full" />
+          <div className="w-20 h-1.5 bg-primary rounded-full" />
         </div>
       </Reveal>
 
-      <StaggerChildren className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <StaggerChildren className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {PORTFOLIO_DATA.achievements.map((achievement, idx) => (
           <StaggerItem key={idx}>
-            <div className="p-8 rounded-3xl bg-card/40 backdrop-blur-md border border-border/50 flex flex-col items-center justify-center text-center h-full hover:border-primary/50 transition-colors group shadow-lg">
-              <div className="p-5 rounded-2xl bg-primary/10 text-primary mb-6 group-hover:scale-110 transition-transform">
-                <Trophy className="w-8 h-8" />
+            <div className="p-5 rounded-2xl bg-card/40 backdrop-blur-md border border-border/50 flex flex-col items-center justify-center text-center h-full hover:border-primary/50 transition-colors group shadow-lg">
+              <div className="p-4 rounded-xl bg-primary/10 text-primary mb-4 group-hover:scale-110 transition-transform">
+                <Trophy className="w-6 h-6" />
               </div>
-              <div className="text-5xl font-bold font-heading text-foreground mb-3 flex items-center">
+              <div className="text-3xl font-bold font-heading text-foreground mb-2 flex items-center">
                 <AnimatedCounter value={achievement.count} />+
               </div>
-              <p className="text-lg font-medium text-muted-foreground">
+              <p className="text-base font-medium text-muted-foreground">
                 {achievement.title}
               </p>
             </div>

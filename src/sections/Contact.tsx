@@ -71,26 +71,26 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-32 w-full max-w-[1000px] px-6 md:px-12 mx-auto">
+    <section id="contact" className="py-16 w-full max-w-[800px] px-5 md:px-12 mx-auto">
       <Reveal>
-        <div className="mb-16 flex flex-col items-center text-center">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading mb-6 text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent w-fit">
+        <div className="mb-8 flex flex-col items-center text-center">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading mb-4 text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent w-fit">
             Get in Touch
           </h2>
-          <div className="w-24 h-1.5 bg-primary rounded-full mb-6" />
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed">
+          <div className="w-20 h-1.5 bg-primary rounded-full mb-5" />
+          <p className="text-base md:text-lg text-muted-foreground max-w-2xl leading-relaxed">
             Have a question or want to work together? Leave a message below and I&apos;ll get back to you as soon as possible.
           </p>
         </div>
       </Reveal>
 
       <Reveal delay={0.2} width="100%">
-        <div className="p-8 md:p-12 rounded-[2rem] bg-card/40 backdrop-blur-xl border border-border/50 relative overflow-hidden shadow-2xl">
+        <div className="p-5 md:p-8 rounded-[1.5rem] bg-card/40 backdrop-blur-xl border border-border/50 relative overflow-hidden shadow-2xl">
           {/* Subtle background glow */}
-          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[120px] -z-10 translate-x-1/2 -translate-y-1/2" />
+          <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-primary/10 rounded-full blur-[100px] -z-10 translate-x-1/2 -translate-y-1/2" />
           
           {errorMsg && (
-            <Alert variant="destructive" className="mb-8 rounded-xl bg-destructive/10 text-destructive border-destructive/20">
+            <Alert variant="destructive" className="mb-6 rounded-xl bg-destructive/10 text-destructive border-destructive/20">
               <AlertCircle className="h-5 w-5" />
               <AlertDescription className="text-base ml-2">
                 {errorMsg}
@@ -99,7 +99,7 @@ export default function Contact() {
           )}
 
           {isSuccess && (
-            <Alert className="mb-8 rounded-xl bg-green-500/10 text-green-500 border-green-500/20">
+            <Alert className="mb-6 rounded-xl bg-green-500/10 text-green-500 border-green-500/20">
               <CheckCircle2 className="h-5 w-5" />
               <AlertDescription className="text-base ml-2">
                 Your message has been sent successfully. I will get back to you soon!
@@ -108,16 +108,16 @@ export default function Contact() {
           )}
 
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <FormField
                   control={form.control}
                   name="name"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-lg font-medium text-foreground">Name</FormLabel>
+                      <FormLabel className="text-base font-medium text-foreground">Name</FormLabel>
                       <FormControl>
-                        <Input placeholder="Alan Turing" className="bg-background/50 border-border/50 focus-visible:ring-primary h-14 rounded-xl text-lg px-5 shadow-sm" {...field} />
+                        <Input placeholder="Alan Turing" className="bg-background/50 border-border/50 focus-visible:ring-primary h-11 rounded-xl text-base px-4 shadow-sm" {...field} />
                       </FormControl>
                       <FormMessage className="text-sm" />
                     </FormItem>
@@ -128,9 +128,9 @@ export default function Contact() {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-lg font-medium text-foreground">Email</FormLabel>
+                      <FormLabel className="text-base font-medium text-foreground">Email</FormLabel>
                       <FormControl>
-                        <Input placeholder="alan@turing.com" className="bg-background/50 border-border/50 focus-visible:ring-primary h-14 rounded-xl text-lg px-5 shadow-sm" {...field} />
+                        <Input placeholder="alan@turing.com" className="bg-background/50 border-border/50 focus-visible:ring-primary h-11 rounded-xl text-base px-4 shadow-sm" {...field} />
                       </FormControl>
                       <FormMessage className="text-sm" />
                     </FormItem>
@@ -143,9 +143,9 @@ export default function Contact() {
                 name="subject"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-lg font-medium text-foreground">Subject</FormLabel>
+                    <FormLabel className="text-base font-medium text-foreground">Subject</FormLabel>
                     <FormControl>
-                      <Input placeholder="Project Inquiry" className="bg-background/50 border-border/50 focus-visible:ring-primary h-14 rounded-xl text-lg px-5 shadow-sm" {...field} />
+                      <Input placeholder="Project Inquiry" className="bg-background/50 border-border/50 focus-visible:ring-primary h-11 rounded-xl text-base px-4 shadow-sm" {...field} />
                     </FormControl>
                     <FormMessage className="text-sm" />
                   </FormItem>
@@ -157,11 +157,11 @@ export default function Contact() {
                 name="message"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-lg font-medium text-foreground">Message</FormLabel>
+                    <FormLabel className="text-base font-medium text-foreground">Message</FormLabel>
                     <FormControl>
                       <Textarea 
                         placeholder="Hi, I'd like to talk about..." 
-                        className="bg-background/50 border-border/50 focus-visible:ring-primary min-h-[200px] resize-none rounded-xl text-lg p-5 shadow-sm" 
+                        className="bg-background/50 border-border/50 focus-visible:ring-primary min-h-[160px] resize-none rounded-xl text-base p-4 shadow-sm" 
                         {...field} 
                       />
                     </FormControl>
@@ -172,7 +172,7 @@ export default function Contact() {
 
               <Button 
                 type="submit" 
-                className="w-full h-16 rounded-xl text-xl font-bold relative overflow-hidden group shadow-lg"
+                className="w-full h-12 rounded-xl text-base font-bold relative overflow-hidden group shadow-lg"
                 disabled={isSubmitting || isSuccess}
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
@@ -183,7 +183,7 @@ export default function Contact() {
                     "Message Sent Successfully!"
                   ) : (
                     <>
-                      Send Message <Send className="w-6 h-6 ml-3" />
+                      Send Message <Send className="w-5 h-5 ml-2" />
                     </>
                   )}
                 </span>
