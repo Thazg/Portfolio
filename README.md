@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# John Doe - Personal Portfolio
 
-## Getting Started
+A production-ready, world-class personal portfolio website built with Next.js 15, Tailwind CSS, Framer Motion, and shadcn/ui.
 
-First, run the development server:
+## Tech Stack
+- **Framework**: Next.js 15 (App Router)
+- **Styling**: Tailwind CSS v4, shadcn/ui
+- **Animations**: Framer Motion
+- **Icons**: Lucide React & React Icons
+- **Forms**: React Hook Form + Zod
+- **Language**: TypeScript
 
+## Features
+- ✅ Fully responsive (Mobile, Tablet, Desktop, Ultra-wide)
+- ✅ SEO optimized (Metadata API, Open Graph, Twitter Cards)
+- ✅ High performance (Next.js Image, Font optimizations)
+- ✅ Modern UI/UX (Glassmorphism, dark theme, smooth animations)
+- ✅ Custom components with Framer Motion reveal effects
+- ✅ Validated contact form
+
+## Setup & Installation
+
+1. Install dependencies
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Run the development server
+```bash
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deployment to Vercel
 
-## Learn More
+This portfolio is fully optimized for Vercel deployment.
 
-To learn more about Next.js, take a look at the following resources:
+1. Push your code to a GitHub repository.
+2. Go to [Vercel](https://vercel.com) and sign in.
+3. Click "Add New..." -> "Project".
+4. Import your GitHub repository.
+5. Keep the default settings (Framework Preset: Next.js).
+6. Click "Deploy".
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Customization
+All portfolio data (Projects, Skills, Experience, Education) is centralized in `src/data/portfolio.ts`. Update this file to customize the content without touching the UI components.
