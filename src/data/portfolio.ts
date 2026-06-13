@@ -142,6 +142,6 @@ export const PORTFOLIO_DATA = {
     github: "https://github.com",
     linkedin: "https://linkedin.com",
     email: "mailto:hello@example.com",
-    twitter: "https://twitter.com",
+    facebook: "https://facebook.com",
   },
 };

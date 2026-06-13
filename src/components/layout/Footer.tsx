@@ -1,6 +1,6 @@
 import { PORTFOLIO_DATA } from "@/data/portfolio";
 import { Mail } from "lucide-react";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
 import Link from "next/link";
 
 export default function Footer() {
@@ -36,13 +36,13 @@ export default function Footer() {
             <span className="sr-only">LinkedIn</span>
           </Link>
           <Link
-            href={PORTFOLIO_DATA.socials.twitter}
+            href={PORTFOLIO_DATA.socials.facebook}
             target="_blank"
             rel="noreferrer"
             className="p-2 rounded-full bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
           >
-            <FaTwitter className="w-5 h-5" />
-            <span className="sr-only">Twitter</span>
+            <FaFacebook className="w-5 h-5" />
+            <span className="sr-only">Facebook</span>
           </Link>
           <Link
             href={PORTFOLIO_DATA.socials.email}
