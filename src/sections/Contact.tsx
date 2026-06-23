@@ -130,7 +130,7 @@ export default function Contact() {
                     <FormItem>
                       <FormLabel className="text-base font-medium text-foreground">Email</FormLabel>
                       <FormControl>
-                        <Input placeholder="alan@turing.com" className="bg-background/50 border-border/50 focus-visible:ring-primary h-11 rounded-xl text-base px-4 shadow-sm" {...field} />
+                        <Input placeholder="your_name@gmail.com" className="bg-background/50 border-border/50 focus-visible:ring-primary h-11 rounded-xl text-base px-4 shadow-sm" {...field} />
                       </FormControl>
                       <FormMessage className="text-sm" />
                     </FormItem>

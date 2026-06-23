@@ -27,7 +27,7 @@ export default function Hero() {
             </span>
             {PORTFOLIO_DATA.headline}
           </div>
-          
+
           <div className="flex flex-col gap-2">
             <span className="text-lg md:text-xl text-muted-foreground font-medium tracking-wide">
               Hi, I&apos;m
@@ -38,17 +38,17 @@ export default function Hero() {
               </span>
             </h1>
           </div>
-          
+
           <div className="space-y-3">
             <p className="text-xl lg:text-2xl text-foreground/90 font-semibold tracking-tight">
               {PORTFOLIO_DATA.role}
             </p>
-            
+
             <p className="text-base md:text-lg text-muted-foreground/80 max-w-2xl leading-relaxed font-medium">
               {PORTFOLIO_DATA.intro}
             </p>
           </div>
-          
+
           <div className="flex flex-wrap items-center gap-4 pt-4">
             <Button size="lg" className="rounded-xl h-11 px-5 text-base font-semibold shadow-lg hover:shadow-[#60A5FA]/20 transition-all hover:-translate-y-1 bg-foreground text-background hover:bg-foreground/90" asChild>
               <a href="#projects">
@@ -69,49 +69,20 @@ export default function Hero() {
           transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
           className="relative flex justify-center lg:justify-end lg:col-span-5"
         >
-          {/* Professional Glassmorphism AI Visualization */}
+          {/* Personal Image */}
           <div className="relative w-full max-w-[350px] aspect-square">
             {/* Extremely soft backdrop glow */}
-            <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-[#60A5FA]/5 to-[#7C3AED]/5 animate-pulse blur-3xl" />
-            
-            <div className="absolute inset-0 rounded-[2rem] bg-card/20 backdrop-blur-2xl border border-white/10 shadow-2xl flex flex-col p-5 overflow-hidden">
-              
-              {/* Decorative neural connections */}
-              <svg className="absolute inset-0 w-full h-full opacity-20 pointer-events-none" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <path d="M10,50 Q30,20 50,50 T90,50" stroke="currentColor" fill="none" strokeWidth="0.5" className="text-[#60A5FA] animate-pulse" />
-                <path d="M20,80 Q50,40 80,80" stroke="currentColor" fill="none" strokeWidth="0.5" className="text-[#7C3AED]" />
-              </svg>
+            <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-[#60A5FA]/20 to-[#7C3AED]/20 animate-pulse blur-3xl" />
 
-              <div className="flex justify-between items-start mb-auto z-10">
-                <div className="p-3 rounded-2xl bg-white/5 border border-white/10 shadow-inner">
-                  <Cpu className="w-6 h-6 text-[#60A5FA]" />
-                </div>
-                <div className="flex gap-2">
-                  <div className="w-2.5 h-2.5 rounded-full bg-green-500 shadow-[0_0_10px_rgba(34,197,94,0.3)]" />
-                  <div className="w-2.5 h-2.5 rounded-full bg-[#60A5FA]" />
-                  <div className="w-2.5 h-2.5 rounded-full bg-[#7C3AED]" />
-                </div>
-              </div>
-
-              <div className="z-10 text-center space-y-3 my-auto">
-                <div className="inline-flex p-4 rounded-3xl bg-gradient-to-br from-white/10 to-white/5 border border-white/10 shadow-2xl backdrop-blur-md mb-2">
-                  <Network className="w-10 h-10 text-[#7C3AED]" />
-                </div>
-                <h3 className="text-xl font-bold text-foreground tracking-tight">NTT_Core</h3>
-                <p className="text-sm text-muted-foreground font-mono bg-black/20 py-1.5 px-3 rounded-lg inline-block border border-white/5">
-                  Status: Optimizing...
-                </p>
-              </div>
-
-              <div className="mt-auto flex justify-between items-end z-10 border-t border-white/10 pt-4">
-                <div className="space-y-1">
-                  <div className="text-xs text-muted-foreground">Architecture</div>
-                  <div className="font-mono text-sm text-foreground font-semibold">Transformer</div>
-                </div>
-                <div className="space-y-1 text-right">
-                  <div className="text-xs text-muted-foreground">Latency</div>
-                  <div className="font-mono text-sm text-green-400 font-semibold">12ms</div>
-                </div>
+            <div className="absolute inset-0 rounded-[2rem] bg-card/20 backdrop-blur-md border border-white/10 shadow-2xl overflow-hidden p-2">
+              <div className="relative w-full h-full rounded-[1.5rem] overflow-hidden bg-gradient-to-tr from-white/5 to-white/10">
+                <Image
+                  src="/profile.png"
+                  alt="Nguyen Tam Thang"
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-700 ease-in-out"
+                  priority
+                />
               </div>
             </div>
           </div>

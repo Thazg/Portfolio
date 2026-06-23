@@ -1,100 +1,77 @@
 <div align="center">
-  
-  # 👋 Hi, I'm Nguyen Tam Thang
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js" />
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white" alt="Framer Motion" />
 
-  ### 🚀 AI Engineer | 🎓 Student at Ho Chi Minh City University of Technology (HCMUT)
+  <h1>✨ My Personal Portfolio ✨</h1>
+  <p>A premium, highly interactive personal portfolio website designed to showcase my projects and skills as an AI Engineer.</p>
 
-  *Bridging the gap between cutting-edge Artificial Intelligence and practical software engineering.*
-
+  <a href="https://nguyentamthang.vercel.app/" target="_blank"><strong>View Live Demo »</strong></a>
+  <br />
   <br />
 
-  <div>
-    <a href="https://www.linkedin.com/in/thangnguyen0512/" target="_blank">
-      <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
-    </a>
-    <a href="mailto:tamthang0512@gmail.com">
-      <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
-    </a>
-    <a href="https://nguyentamthang.vercel.app/" target="_blank">
-      <img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Portfolio" />
-    </a>
-  </div>
-
+  <!-- Insert a screenshot of your portfolio here -->
+  <img src="https://raw.githubusercontent.com/Thazg/Portfolio/main/public/screenshot.png" alt="Portfolio Screenshot" width="800" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
 </div>
 
----
+<br />
 
-## 👨‍💻 About Me
+## 🚀 Overview
 
-- 🎓 I'm currently studying at **Ho Chi Minh City University of Technology (HCMUT - VNU-HCM)**, one of the premier engineering institutions in Vietnam.
-- 🧠 I specialize in **Artificial Intelligence, Machine Learning, and Deep Learning**, with a passion for designing intelligent systems that solve real-world problems.
-- 🔭 I’m continuously exploring the frontiers of **Large Language Models (LLMs)**, **Computer Vision**, and **Agentic Workflows**.
-- 💡 I love transforming complex academic research into scalable, user-centric applications.
-- 💬 Ask me about **Python, PyTorch, Neural Network Architectures, and Web Development**.
+This repository contains the source code for my personal portfolio. Designed with a focus on modern aesthetics, smooth micro-animations, and optimal performance, it serves as a digital resume and a showcase of my technical capabilities.
 
-## 🛠️ Tech Stack & Tools
+## ✨ Features
 
-### 🤖 AI & Data Science
-<p>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch" />
-  <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow" />
-  <img src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Scikit-Learn" />
-  <img src="https://img.shields.io/badge/Hugging%20Face-F5C029?style=for-the-badge&logo=huggingface&logoColor=white" alt="Hugging Face" />
-  <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white" alt="OpenCV" />
-  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas" />
-  <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy" />
-</p>
+- **Dark Mode First**: Beautiful dark-themed UI with meticulously chosen color palettes.
+- **Smooth Animations**: Page transitions, scroll reveals, and hover effects powered by `framer-motion`.
+- **Responsive Design**: Flawless layout across all devices (Mobile, Tablet, Desktop).
+- **Performance Optimized**: Built on Next.js App Router with optimized images and fonts.
+- **Dynamic Sections**: Complete timeline for Education & Experience, plus an interactive Projects showcase.
 
-### 💻 Software Engineering
-<p>
-  <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="C++" />
-  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
-  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux" />
-</p>
+## 🛠️ Tech Stack
 
-## 📊 GitHub Analytics
+- **Framework**: [Next.js](https://nextjs.org/) (App Router)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Deployment**: [Vercel](https://vercel.com/)
 
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=YOUR_GITHUB_USERNAME&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117" alt="GitHub Stats" />
-  <br/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=YOUR_GITHUB_USERNAME&theme=tokyonight&hide_border=true&background=0D1117" alt="GitHub Streak" />
-</div>
+## 🏃‍♂️ Getting Started
 
-> **Note:** *Remember to replace `YOUR_GITHUB_USERNAME` in the markdown source with your actual GitHub username to display your stats!*
+To run this project locally on your machine, follow these steps:
 
-## 🌟 Featured Projects
-
-| Project | Description | Technologies |
-|---------|-------------|--------------|
-| **[Personal Portfolio](#)** | A premium, interactive personal portfolio website showcasing my projects, skills, and experience with modern web aesthetics. | Next.js, Tailwind CSS, Framer Motion |
-| **[AI Agent System](#)** | *(Add your AI project here)* A robust framework for autonomous AI agents capable of reasoning and executing tasks. | Python, LangChain, OpenAI API |
-| **[Computer Vision App](#)** | *(Add your CV project here)* Real-time object detection and classification system for edge devices. | PyTorch, OpenCV, YOLO |
-
----
-
-## 🚀 About This Repository (My Portfolio)
-
-This repository contains the source code for my personal portfolio website. Built with modern web technologies for optimal performance and aesthetics.
-
-### Quick Start
+### 1. Clone the repository
 ```bash
-# Install dependencies
-npm install
+git clone https://github.com/Thazg/Portfolio.git
+cd Portfolio/my-portfolio
+```
 
-# Run the development server
+### 2. Install dependencies
+```bash
+npm install
+```
+
+### 3. Run the development server
+```bash
 npm run dev
 ```
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
----
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. You can start editing the page by modifying `src/app/page.tsx`.
 
-<div align="center">
-  <i>"The future is not just predicted; it is built."</i>
-  <br/><br/>
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer" width="100%"/>
-</div>
+## 📁 Project Structure
+
+```text
+src/
+├── app/          # Next.js App Router layout and pages
+├── components/   # Reusable UI components (buttons, layout)
+├── sections/     # Major page sections (Hero, Experience, Education)
+└── ...
+```
+
+## 📬 Contact
+
+- **Facebook**: [Thắng Nguyễn](https://www.facebook.com/ntt0512/)
+- **LinkedIn**: [thangnguyen0512](https://www.linkedin.com/in/thangnguyen0512/)
+- **Portfolio**: [nguyentamthang.vercel.app](https://nguyentamthang.vercel.app/)

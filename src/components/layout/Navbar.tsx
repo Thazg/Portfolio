@@ -95,13 +95,13 @@ export default function Navbar() {
           </nav>
 
           <div className="hidden md:flex items-center gap-5">
-            <NextLink href="https://github.com" target="_blank" rel="noreferrer">
+            <NextLink href="https://github.com/Thazg" target="_blank" rel="noreferrer">
               <Button variant="ghost" size="icon" className="rounded-full w-10 h-10 hover:bg-secondary/80 hover:text-foreground transition-colors">
                 <FaGithub className="w-5 h-5" />
                 <span className="sr-only">GitHub</span>
               </Button>
             </NextLink>
-            <NextLink href="https://linkedin.com" target="_blank" rel="noreferrer">
+            <NextLink href="https://www.linkedin.com/in/thangnguyen0512/" target="_blank" rel="noreferrer">
               <Button variant="ghost" size="icon" className="rounded-full w-10 h-10 hover:bg-secondary/80 hover:text-foreground transition-colors">
                 <FaLinkedin className="w-5 h-5" />
                 <span className="sr-only">LinkedIn</span>
