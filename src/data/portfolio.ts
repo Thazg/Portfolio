@@ -79,21 +79,11 @@ export const PORTFOLIO_DATA = {
     {
       company: "AI Research Lab",
       position: "Machine Learning Researcher",
-      duration: "2023 - Present",
+      duration: "2026 - Present",
       responsibilities: [
         "Researched and implemented novel transformer architectures for natural language understanding.",
         "Optimized deep learning training pipelines, reducing epoch times by 35% across multi-GPU setups.",
         "Published findings on efficient parameter tuning in top-tier AI conferences.",
-      ],
-    },
-    {
-      company: "Tech Innovations Enterprise",
-      position: "Software Engineer",
-      duration: "2021 - 2023",
-      responsibilities: [
-        "Architected scalable backend microservices using Node.js and PostgreSQL handling 50k+ daily active users.",
-        "Integrated advanced machine learning models into production systems via RESTful APIs.",
-        "Mentored junior developers and established CI/CD best practices across the engineering organization.",
       ],
     },
   ],
@@ -101,8 +91,8 @@ export const PORTFOLIO_DATA = {
     {
       university: "National University",
       degree: "B.S. in Computer Science",
-      duration: "2019 - 2023",
-      gpa: "3.9 / 4.0",
+      duration: "2025 - 2029",
+      gpa: "4.0 / 4.0",
       coursework: [
         "Artificial Intelligence",
         "Machine Learning",
