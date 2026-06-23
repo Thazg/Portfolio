@@ -12,7 +12,7 @@
   <br />
 
   <!-- Insert a screenshot of your portfolio here -->
-  <img src="https://raw.githubusercontent.com/Thazg/Portfolio/main/public/screenshot.png" alt="Portfolio Screenshot" width="800" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+  <img src="https://raw.githubusercontent.com/Thazg/Portfolio/main/public/portfolio.png" alt="Portfolio Screenshot" width="800" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
 </div>
 
 <br />
