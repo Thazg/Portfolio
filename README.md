@@ -1,47 +1,100 @@
-# John Doe - Personal Portfolio
+<div align="center">
+  
+  # 👋 Hi, I'm Nguyen Tam Thang
 
-A production-ready, world-class personal portfolio website built with Next.js 15, Tailwind CSS, Framer Motion, and shadcn/ui.
+  ### 🚀 AI Engineer | 🎓 Student at Ho Chi Minh City University of Technology (HCMUT)
 
-## Tech Stack
-- **Framework**: Next.js 15 (App Router)
-- **Styling**: Tailwind CSS v4, shadcn/ui
-- **Animations**: Framer Motion
-- **Icons**: Lucide React & React Icons
-- **Forms**: React Hook Form + Zod
-- **Language**: TypeScript
+  *Bridging the gap between cutting-edge Artificial Intelligence and practical software engineering.*
 
-## Features
-- ✅ Fully responsive (Mobile, Tablet, Desktop, Ultra-wide)
-- ✅ SEO optimized (Metadata API, Open Graph, Twitter Cards)
-- ✅ High performance (Next.js Image, Font optimizations)
-- ✅ Modern UI/UX (Glassmorphism, dark theme, smooth animations)
-- ✅ Custom components with Framer Motion reveal effects
-- ✅ Validated contact form
+  <br />
 
-## Setup & Installation
+  <div>
+    <a href="https://www.linkedin.com/in/thangnguyen0512/" target="_blank">
+      <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+    </a>
+    <a href="mailto:tamthang0512@gmail.com">
+      <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+    </a>
+    <a href="https://nguyentamthang.vercel.app/" target="_blank">
+      <img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Portfolio" />
+    </a>
+  </div>
 
-1. Install dependencies
+</div>
+
+---
+
+## 👨‍💻 About Me
+
+- 🎓 I'm currently studying at **Ho Chi Minh City University of Technology (HCMUT - VNU-HCM)**, one of the premier engineering institutions in Vietnam.
+- 🧠 I specialize in **Artificial Intelligence, Machine Learning, and Deep Learning**, with a passion for designing intelligent systems that solve real-world problems.
+- 🔭 I’m continuously exploring the frontiers of **Large Language Models (LLMs)**, **Computer Vision**, and **Agentic Workflows**.
+- 💡 I love transforming complex academic research into scalable, user-centric applications.
+- 💬 Ask me about **Python, PyTorch, Neural Network Architectures, and Web Development**.
+
+## 🛠️ Tech Stack & Tools
+
+### 🤖 AI & Data Science
+<p>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch" />
+  <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow" />
+  <img src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Scikit-Learn" />
+  <img src="https://img.shields.io/badge/Hugging%20Face-F5C029?style=for-the-badge&logo=huggingface&logoColor=white" alt="Hugging Face" />
+  <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white" alt="OpenCV" />
+  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas" />
+  <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy" />
+</p>
+
+### 💻 Software Engineering
+<p>
+  <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="C++" />
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
+  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux" />
+</p>
+
+## 📊 GitHub Analytics
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=YOUR_GITHUB_USERNAME&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117" alt="GitHub Stats" />
+  <br/>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=YOUR_GITHUB_USERNAME&theme=tokyonight&hide_border=true&background=0D1117" alt="GitHub Streak" />
+</div>
+
+> **Note:** *Remember to replace `YOUR_GITHUB_USERNAME` in the markdown source with your actual GitHub username to display your stats!*
+
+## 🌟 Featured Projects
+
+| Project | Description | Technologies |
+|---------|-------------|--------------|
+| **[Personal Portfolio](#)** | A premium, interactive personal portfolio website showcasing my projects, skills, and experience with modern web aesthetics. | Next.js, Tailwind CSS, Framer Motion |
+| **[AI Agent System](#)** | *(Add your AI project here)* A robust framework for autonomous AI agents capable of reasoning and executing tasks. | Python, LangChain, OpenAI API |
+| **[Computer Vision App](#)** | *(Add your CV project here)* Real-time object detection and classification system for edge devices. | PyTorch, OpenCV, YOLO |
+
+---
+
+## 🚀 About This Repository (My Portfolio)
+
+This repository contains the source code for my personal portfolio website. Built with modern web technologies for optimal performance and aesthetics.
+
+### Quick Start
 ```bash
+# Install dependencies
 npm install
-```
 
-2. Run the development server
-```bash
+# Run the development server
 npm run dev
 ```
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-3. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-## Deployment to Vercel
-
-This portfolio is fully optimized for Vercel deployment.
-
-1. Push your code to a GitHub repository.
-2. Go to [Vercel](https://vercel.com) and sign in.
-3. Click "Add New..." -> "Project".
-4. Import your GitHub repository.
-5. Keep the default settings (Framework Preset: Next.js).
-6. Click "Deploy".
-
-## Customization
-All portfolio data (Projects, Skills, Experience, Education) is centralized in `src/data/portfolio.ts`. Update this file to customize the content without touching the UI components.
+<div align="center">
+  <i>"The future is not just predicted; it is built."</i>
+  <br/><br/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer" width="100%"/>
+</div>
