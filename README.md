@@ -1,77 +1,102 @@
-<div align="center">
-  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js" />
-  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
-  <img src="https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white" alt="Framer Motion" />
+# Nguyễn Tâm Thắng — Portfolio
 
-  <h1>✨ My Personal Portfolio ✨</h1>
-  <p>A premium, highly interactive personal portfolio website designed to showcase my projects and skills as an AI Engineer.</p>
+Personal portfolio for Nguyễn Tâm Thắng, an AI Engineer and software developer studying at Ho Chi Minh City University of Technology (HCMUT). The site presents selected projects, technical skills, experience, education, achievements, writing, and contact information in a responsive single-page experience.
 
-  <a href="https://nguyentamthang.vercel.app/" target="_blank"><strong>View Live Demo »</strong></a>
-  <br />
-  <br />
+[Live site](https://nguyentamthang.vercel.app/) · [LinkedIn](https://www.linkedin.com/in/thangnguyen0512/) · [Facebook](https://www.facebook.com/ntt0512/)
 
-  <!-- Insert a screenshot of your portfolio here -->
-  <img src="public/portfolio.png" alt="Portfolio Screenshot" width="800" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
-</div>
+![Portfolio home page](./public/portfolio.png)
 
-<br />
+## Highlights
 
-## 🚀 Overview
+- Responsive layout for mobile, tablet, and desktop screens
+- Structured sections for projects, skills, experience, education, and achievements
+- Focused motion and reveal interactions with reduced-motion support
+- Accessible navigation, keyboard focus states, and readable content widths
+- Contact form with client-side validation and email delivery through Resend
+- Next.js image and font optimization with a production-ready App Router setup
 
-This repository contains the source code for my personal portfolio. Designed with a focus on modern aesthetics, smooth micro-animations, and optimal performance, it serves as a digital resume and a showcase of my technical capabilities.
+## Technology
 
-## ✨ Features
+| Area | Tools |
+| --- | --- |
+| Framework | Next.js 16, React 19, TypeScript |
+| Styling | Tailwind CSS 4, CSS design tokens |
+| Motion | Framer Motion |
+| Forms | React Hook Form, Zod |
+| UI | Radix UI primitives, Lucide React |
+| Email | Resend |
+| Deployment | Vercel |
 
-- **Dark Mode First**: Beautiful dark-themed UI with meticulously chosen color palettes.
-- **Smooth Animations**: Page transitions, scroll reveals, and hover effects powered by `framer-motion`.
-- **Responsive Design**: Flawless layout across all devices (Mobile, Tablet, Desktop).
-- **Performance Optimized**: Built on Next.js App Router with optimized images and fonts.
-- **Dynamic Sections**: Complete timeline for Education & Experience, plus an interactive Projects showcase.
+## Project structure
 
-## 🛠️ Tech Stack
-
-- **Framework**: [Next.js](https://nextjs.org/) (App Router)
-- **Language**: [TypeScript](https://www.typescriptlang.org/)
-- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
-- **Animations**: [Framer Motion](https://www.framer.com/motion/)
-- **Icons**: [Lucide React](https://lucide.dev/)
-- **Deployment**: [Vercel](https://vercel.com/)
-
-## 🏃‍♂️ Getting Started
-
-To run this project locally on your machine, follow these steps:
-
-### 1. Clone the repository
-```bash
-git clone https://github.com/Thazg/Portfolio.git
-cd Portfolio/my-portfolio
+```text
+.
+├── public/                  # Images and static assets
+├── src/
+│   ├── app/                 # App Router pages, layout, styles, and API routes
+│   │   └── api/contact/     # Contact form email endpoint
+│   ├── components/
+│   │   ├── animations/      # Shared motion components
+│   │   ├── layout/          # Navigation and footer
+│   │   └── ui/              # Reusable interface primitives
+│   ├── data/                # Portfolio content and links
+│   ├── lib/                 # Shared utilities
+│   └── sections/            # Home page sections
+├── package.json
+└── next.config.ts
 ```
 
-### 2. Install dependencies
+Most portfolio content is maintained in [`src/data/portfolio.ts`](./src/data/portfolio.ts). Page composition lives in [`src/app/page.tsx`](./src/app/page.tsx), while each major section has its own component in [`src/sections`](./src/sections).
+
+## Run locally
+
+### Requirements
+
+- Node.js 20 or newer
+- npm
+
+### Setup
+
 ```bash
+git clone https://github.com/Thazg/Portfolio.git
+cd Portfolio
 npm install
 ```
 
-### 3. Run the development server
+Create a `.env.local` file if you want the contact form to send email:
+
+```env
+RESEND_API_KEY=your_resend_api_key
+EMAIL_ADDRESS=your_destination_email
+```
+
+Then start the development server:
+
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. You can start editing the page by modifying `src/app/page.tsx`.
+Open [http://localhost:3000](http://localhost:3000).
 
-## 📁 Project Structure
+## Available commands
 
-```text
-src/
-├── app/          # Next.js App Router layout and pages
-├── components/   # Reusable UI components (buttons, layout)
-├── sections/     # Major page sections (Hero, Experience, Education)
-└── ...
-```
+| Command | Purpose |
+| --- | --- |
+| `npm run dev` | Start the local development server |
+| `npm run lint` | Run ESLint checks |
+| `npm run build` | Create an optimized production build |
+| `npm run start` | Serve the production build |
 
-## 📬 Contact
+## Contact form configuration
 
-- **Facebook**: [Thắng Nguyễn](https://www.facebook.com/ntt0512/)
-- **LinkedIn**: [thangnguyen0512](https://www.linkedin.com/in/thangnguyen0512/)
-- **Portfolio**: [nguyentamthang.vercel.app](https://nguyentamthang.vercel.app/)
+The contact form posts to `/api/contact`. The server route validates required fields and sends the message through Resend using the environment variables above. For production, configure both variables in the deployment environment and replace the Resend testing sender with a verified domain when available.
+
+## Deployment
+
+The project is ready for Vercel deployment. Import the repository, add `RESEND_API_KEY` and `EMAIL_ADDRESS` to the project environment, and deploy from the `main` branch.
+
+## Contact
+
+- Portfolio: [nguyentamthang.vercel.app](https://nguyentamthang.vercel.app/)
+- LinkedIn: [thangnguyen0512](https://www.linkedin.com/in/thangnguyen0512/)
+- Facebook: [Nguyễn Tâm Thắng](https://www.facebook.com/ntt0512/)
