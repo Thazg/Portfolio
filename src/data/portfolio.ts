@@ -1,10 +1,6 @@
 import {
-  Code2,
   Database,
-  Globe,
-  Layout,
   LineChart,
-  Server,
   Settings,
   Terminal,
 } from "lucide-react";

@@ -63,18 +63,20 @@ export default function Contact() {
       setIsSuccess(true);
       form.reset();
       setTimeout(() => setIsSuccess(false), 5000);
-    } catch (err: any) {
-      setErrorMsg(err.message || "An unexpected error occurred.");
+    } catch (err: unknown) {
+      setErrorMsg(
+        err instanceof Error ? err.message : "An unexpected error occurred."
+      );
     } finally {
       setIsSubmitting(false);
     }
   }
 
   return (
-    <section id="contact" className="py-16 w-full max-w-[800px] px-5 md:px-12 mx-auto">
+    <section id="contact" className="py-16 w-full max-w-[1200px] px-5 md:px-12 mx-auto">
       <Reveal>
-        <div className="mb-8 flex flex-col items-center text-center">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading mb-4 text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent w-fit">
+        <div className="mb-8 text-left">
+          <h2 className="text-2xl md:text-3xl font-bold font-heading mb-4 text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent w-fit">
             Get in Touch
           </h2>
           <div className="w-20 h-1.5 bg-primary rounded-full mb-5" />
@@ -84,8 +86,9 @@ export default function Contact() {
         </div>
       </Reveal>
 
-      <Reveal delay={0.2} width="100%">
-        <div className="p-5 md:p-8 rounded-[1.5rem] bg-card/40 backdrop-blur-xl border border-border/50 relative overflow-hidden shadow-2xl">
+      <div className="max-w-[800px] mx-auto">
+        <Reveal delay={0.2} width="100%">
+          <div className="p-5 md:p-8 rounded-[1.5rem] bg-card/40 backdrop-blur-xl border border-border/50 relative overflow-hidden shadow-2xl">
           {/* Subtle background glow */}
           <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-primary/10 rounded-full blur-[100px] -z-10 translate-x-1/2 -translate-y-1/2" />
           
@@ -117,7 +120,7 @@ export default function Contact() {
                     <FormItem>
                       <FormLabel className="text-base font-medium text-foreground">Name</FormLabel>
                       <FormControl>
-                        <Input placeholder="Alan Turing" className="bg-background/50 border-border/50 focus-visible:ring-primary h-11 rounded-xl text-base px-4 shadow-sm" {...field} />
+                        <Input autoComplete="name" placeholder="Your full name" className="bg-background/50 border-border/50 focus-visible:ring-primary h-11 rounded-xl text-base px-4 shadow-sm" {...field} />
                       </FormControl>
                       <FormMessage className="text-sm" />
                     </FormItem>
@@ -130,7 +133,7 @@ export default function Contact() {
                     <FormItem>
                       <FormLabel className="text-base font-medium text-foreground">Email</FormLabel>
                       <FormControl>
-                        <Input placeholder="your_name@gmail.com" className="bg-background/50 border-border/50 focus-visible:ring-primary h-11 rounded-xl text-base px-4 shadow-sm" {...field} />
+                        <Input type="email" autoComplete="email" inputMode="email" placeholder="Your email address" className="bg-background/50 border-border/50 focus-visible:ring-primary h-11 rounded-xl text-base px-4 shadow-sm" {...field} />
                       </FormControl>
                       <FormMessage className="text-sm" />
                     </FormItem>
@@ -145,7 +148,7 @@ export default function Contact() {
                   <FormItem>
                     <FormLabel className="text-base font-medium text-foreground">Subject</FormLabel>
                     <FormControl>
-                      <Input placeholder="Project Inquiry" className="bg-background/50 border-border/50 focus-visible:ring-primary h-11 rounded-xl text-base px-4 shadow-sm" {...field} />
+                      <Input placeholder="Project or collaboration topic" className="bg-background/50 border-border/50 focus-visible:ring-primary h-11 rounded-xl text-base px-4 shadow-sm" {...field} />
                     </FormControl>
                     <FormMessage className="text-sm" />
                   </FormItem>
@@ -160,7 +163,7 @@ export default function Contact() {
                     <FormLabel className="text-base font-medium text-foreground">Message</FormLabel>
                     <FormControl>
                       <Textarea 
-                        placeholder="Hi, I'd like to talk about..." 
+                        placeholder="Tell me a little about what you have in mind..."
                         className="bg-background/50 border-border/50 focus-visible:ring-primary min-h-[160px] resize-none rounded-xl text-base p-4 shadow-sm" 
                         {...field} 
                       />
@@ -190,8 +193,9 @@ export default function Contact() {
               </Button>
             </form>
           </Form>
-        </div>
-      </Reveal>
+          </div>
+        </Reveal>
+      </div>
     </section>
   );
 }

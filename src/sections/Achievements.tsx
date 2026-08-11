@@ -4,38 +4,40 @@ import { PORTFOLIO_DATA } from "@/data/portfolio";
 import { Reveal, StaggerChildren, StaggerItem } from "@/components/animations/Reveal";
 import { Trophy } from "lucide-react";
 import { useEffect, useState } from "react";
-import { motion, useAnimation, useInView } from "framer-motion";
+import { useInView, useReducedMotion } from "framer-motion";
 import { useRef } from "react";
 
 function AnimatedCounter({ value }: { value: number }) {
   const [count, setCount] = useState(0);
-  const controls = useAnimation();
-  const ref = useRef(null);
+  const ref = useRef<HTMLSpanElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
+  const reduceMotion = useReducedMotion();
 
   useEffect(() => {
-    if (isInView) {
-      let start = 0;
-      const end = value;
-      const duration = 2000;
-      const incrementTime = duration / end;
-      
-      const timer = setInterval(() => {
-        start += 1;
-        setCount(start);
-        if (start === end) clearInterval(timer);
-      }, incrementTime);
-    }
-  }, [isInView, value]);
+    if (!isInView || reduceMotion) return;
 
-  return <span ref={ref}>{count}</span>;
+    const duration = 1200;
+    const startTime = performance.now();
+    let animationFrame = 0;
+
+    const update = (now: number) => {
+      const progress = Math.min((now - startTime) / duration, 1);
+      setCount(Math.round(value * (1 - Math.pow(1 - progress, 3))));
+      if (progress < 1) animationFrame = requestAnimationFrame(update);
+    };
+
+    animationFrame = requestAnimationFrame(update);
+    return () => cancelAnimationFrame(animationFrame);
+  }, [isInView, reduceMotion, value]);
+
+  return <span ref={ref}>{reduceMotion && isInView ? value : count}</span>;
 }
 
 export default function Achievements() {
   return (
     <section id="achievements" className="py-16 w-full max-w-[1200px] px-5 md:px-12">
       <Reveal>
-        <div className="mb-8 flex flex-col items-center text-center">
+        <div className="mb-8 text-left">
           <h2 className="text-2xl md:text-3xl font-bold font-heading mb-4 text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent w-fit">
             Achievements
           </h2>

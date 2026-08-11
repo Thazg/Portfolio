@@ -3,15 +3,14 @@
 import { motion } from "framer-motion";
 import { PORTFOLIO_DATA } from "@/data/portfolio";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Mail, Terminal, Cpu, Network } from "lucide-react";
+import { ArrowRight, Mail } from "lucide-react";
 import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center pt-20 pb-12 w-full max-w-[1100px] px-5 md:px-8 relative overflow-hidden">
-      {/* Softer, more elegant ambient background glows */}
+    <section className="flex items-center justify-center pt-28 md:pt-32 pb-16 w-full max-w-[1100px] px-5 md:px-8 relative overflow-hidden">
+      {/* Keep the ambient light on the copy side so the portrait edge stays clean. */}
       <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[#60A5FA]/[0.03] rounded-full blur-[100px] -z-10" />
-      <div className="absolute top-1/2 right-1/4 translate-x-1/4 translate-y-1/4 w-[300px] h-[300px] bg-[#7C3AED]/[0.03] rounded-full blur-[80px] -z-10" />
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center w-full">
         <motion.div
@@ -71,15 +70,13 @@ export default function Hero() {
         >
           {/* Personal Image */}
           <div className="relative w-full max-w-[350px] aspect-square">
-            {/* Extremely soft backdrop glow */}
-            <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-[#60A5FA]/20 to-[#7C3AED]/20 animate-pulse blur-3xl" />
-
-            <div className="absolute inset-0 rounded-[2rem] bg-card/20 backdrop-blur-md border border-white/10 shadow-2xl overflow-hidden p-2">
+            <div className="absolute inset-0 rounded-[2rem] bg-card/40 border border-white/10 shadow-2xl overflow-hidden p-2">
               <div className="relative w-full h-full rounded-[1.5rem] overflow-hidden bg-gradient-to-tr from-white/5 to-white/10">
                 <Image
                   src="/profile.png"
                   alt="Nguyen Tam Thang"
                   fill
+                  sizes="(max-width: 1024px) 350px, 30vw"
                   className="object-cover hover:scale-105 transition-transform duration-700 ease-in-out"
                   priority
                 />

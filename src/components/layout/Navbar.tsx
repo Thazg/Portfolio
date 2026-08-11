@@ -82,7 +82,7 @@ export default function Navbar() {
             Nguyễn Tâm Thắng
           </NextLink>
 
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden lg:flex items-center gap-6">
             {NAV_LINKS.map((link) => (
               <NextLink
                 key={link.name}
@@ -94,19 +94,19 @@ export default function Navbar() {
             ))}
           </nav>
 
-          <div className="hidden md:flex items-center gap-5">
-            <NextLink href="https://github.com/Thazg" target="_blank" rel="noreferrer">
-              <Button variant="ghost" size="icon" className="rounded-full w-10 h-10 hover:bg-secondary/80 hover:text-foreground transition-colors">
+          <div className="hidden lg:flex items-center gap-5">
+            <Button variant="ghost" size="icon" className="rounded-full w-10 h-10 hover:bg-secondary/80 hover:text-foreground transition-colors" asChild>
+              <NextLink href="https://github.com/Thazg" target="_blank" rel="noreferrer">
                 <FaGithub className="w-5 h-5" />
                 <span className="sr-only">GitHub</span>
-              </Button>
-            </NextLink>
-            <NextLink href="https://www.linkedin.com/in/thangnguyen0512/" target="_blank" rel="noreferrer">
-              <Button variant="ghost" size="icon" className="rounded-full w-10 h-10 hover:bg-secondary/80 hover:text-foreground transition-colors">
+              </NextLink>
+            </Button>
+            <Button variant="ghost" size="icon" className="rounded-full w-10 h-10 hover:bg-secondary/80 hover:text-foreground transition-colors" asChild>
+              <NextLink href="https://www.linkedin.com/in/thangnguyen0512/" target="_blank" rel="noreferrer">
                 <FaLinkedin className="w-5 h-5" />
                 <span className="sr-only">LinkedIn</span>
-              </Button>
-            </NextLink>
+              </NextLink>
+            </Button>
           </div>
 
           <Button
@@ -116,7 +116,7 @@ export default function Navbar() {
             aria-label={mobileMenuOpen ? "Close mobile navigation menu" : "Open mobile navigation menu"}
             aria-expanded={mobileMenuOpen}
             aria-controls="mobile-navigation-menu"
-            className="md:hidden rounded-full w-10 h-10 hover:bg-secondary/80 hover:text-foreground transition-colors"
+            className="lg:hidden rounded-full w-10 h-10 hover:bg-secondary/80 hover:text-foreground transition-colors"
             onClick={() => setMobileMenuOpen((open) => !open)}
           >
             {mobileMenuOpen ? <X className="w-5 h-5" aria-hidden="true" /> : <Menu className="w-5 h-5" aria-hidden="true" />}
@@ -130,7 +130,7 @@ export default function Navbar() {
             <motion.button
               type="button"
               aria-label="Close mobile navigation menu"
-              className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm md:hidden"
+              className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm lg:hidden"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -141,7 +141,7 @@ export default function Navbar() {
             <motion.nav
               id="mobile-navigation-menu"
               aria-label="Mobile navigation"
-              className="fixed left-4 right-4 top-24 z-50 overflow-hidden rounded-3xl border border-border/60 bg-background/95 p-3 shadow-2xl shadow-black/30 backdrop-blur-xl md:hidden"
+              className="fixed left-4 right-4 top-24 z-50 overflow-hidden rounded-3xl border border-border/60 bg-background/95 p-3 shadow-2xl shadow-black/30 backdrop-blur-xl lg:hidden"
               initial={{ opacity: 0, y: -16, scale: 0.98 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -16, scale: 0.98 }}

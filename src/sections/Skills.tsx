@@ -6,13 +6,13 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-14 w-full max-w-[1200px] px-5 md:px-12">
+    <section id="skills" className="py-16 w-full max-w-[1200px] px-5 md:px-12">
       <Reveal>
-        <div className="mb-6 flex flex-col items-center text-center">
-          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold font-heading mb-3 text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent w-fit">
+        <div className="mb-8 text-left">
+          <h2 className="text-2xl md:text-3xl font-bold font-heading mb-4 text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent w-fit">
             Technical Skills
           </h2>
-          <div className="w-16 h-1.5 bg-primary rounded-full mb-5" />
+          <div className="w-20 h-1.5 bg-primary rounded-full mb-5" />
           <p className="text-base text-muted-foreground max-w-3xl">
             A comprehensive list of the technologies, languages, and tools I use to bring ideas to life.
           </p>

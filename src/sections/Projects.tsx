@@ -10,13 +10,13 @@ import Image from "next/image";
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-14 w-full max-w-[1200px] px-5 md:px-12">
+    <section id="projects" className="py-16 w-full max-w-[1200px] px-5 md:px-12">
       <Reveal>
-        <div className="mb-6">
-          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold font-heading mb-4 text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent w-fit">
+        <div className="mb-8 text-left">
+          <h2 className="text-2xl md:text-3xl font-bold font-heading mb-4 text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent w-fit">
             Featured Projects
           </h2>
-          <div className="w-16 h-1.5 bg-primary rounded-full" />
+          <div className="w-20 h-1.5 bg-primary rounded-full" />
         </div>
       </Reveal>
 
@@ -29,6 +29,7 @@ export default function Projects() {
                   src={project.image}
                   alt={project.title}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 540px"
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-background/30 group-hover:bg-transparent transition-colors duration-500" />

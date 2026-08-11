@@ -6,10 +6,10 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export default function About() {
   return (
-    <section id="about" className="py-14 w-full max-w-[1200px] px-5 md:px-12">
+    <section id="about" className="py-16 w-full max-w-[1200px] px-5 md:px-12">
       <Reveal>
-        <div className="mb-6">
-          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold font-heading mb-6 text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent w-fit">
+        <div className="mb-8 text-left">
+          <h2 className="text-2xl md:text-3xl font-bold font-heading mb-4 text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent w-fit">
             About Me
           </h2>
           <div className="w-20 h-1.5 bg-primary rounded-full" />

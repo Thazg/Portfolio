@@ -2,7 +2,7 @@
 
 import { PORTFOLIO_DATA } from "@/data/portfolio";
 import { Reveal, StaggerChildren, StaggerItem } from "@/components/animations/Reveal";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar } from "lucide-react";
 import Image from "next/image";
@@ -12,7 +12,7 @@ export default function BlogPreview() {
   return (
     <section className="py-16 w-full max-w-[1200px] px-5 md:px-12">
       <Reveal>
-        <div className="mb-8">
+        <div className="mb-8 text-left">
           <h2 className="text-2xl md:text-3xl font-bold font-heading mb-4 text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent w-fit">
             Latest Articles
           </h2>
@@ -29,6 +29,7 @@ export default function BlogPreview() {
                   src={post.thumbnail}
                   alt={post.title}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 360px"
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               </div>

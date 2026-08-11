@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 const spaceGrotesk = Space_Grotesk({
-  variable: "--font-heading",
+  variable: "--font-display",
   subsets: ["latin"],
 });
 
