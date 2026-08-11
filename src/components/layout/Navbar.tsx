@@ -9,13 +9,11 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 
 const NAV_LINKS = [
-  { name: "Home", href: "#" },
+  { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
-  { name: "Experience", href: "#experience" },
   { name: "Education", href: "#education" },
-  { name: "Achievements", href: "#achievements" },
   { name: "Contact", href: "#contact" },
 ];
 

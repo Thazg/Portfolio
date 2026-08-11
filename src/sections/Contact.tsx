@@ -4,10 +4,17 @@ import { Reveal } from "@/components/animations/Reveal";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Send, AlertCircle, CheckCircle2 } from "lucide-react";
+import {
+  AlertCircle,
+  ArrowUpRight,
+  CheckCircle2,
+  Send,
+} from "lucide-react";
+import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import * as z from "zod";
+import Link from "next/link";
+import { contactFormSchema, type ContactFormValues } from "@/lib/contact-schema";
 import {
   Form,
   FormControl,
@@ -19,29 +26,47 @@ import {
 import { useState } from "react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 
-const formSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters"),
-  email: z.string().email("Invalid email address"),
-  subject: z.string().min(5, "Subject must be at least 5 characters"),
-  message: z.string().min(10, "Message must be at least 10 characters"),
-});
+const fieldClassName =
+  "h-14 rounded-xl border-border/70 bg-background/60 px-5 text-base shadow-inner shadow-black/10 placeholder:text-muted-foreground/70 transition-[border-color,box-shadow,background-color] focus-visible:border-primary focus-visible:bg-background/80 focus-visible:ring-2 focus-visible:ring-primary/20";
+
+const contactLinks = [
+  {
+    label: "GitHub",
+    value: "github.com/Thazg",
+    href: "https://github.com/Thazg",
+    icon: FaGithub,
+  },
+  {
+    label: "LinkedIn",
+    value: "linkedin.com/in/thangnguyen0512",
+    href: "https://www.linkedin.com/in/thangnguyen0512/",
+    icon: FaLinkedin,
+  },
+  {
+    label: "Facebook",
+    value: "facebook.com/ntt0512",
+    href: "https://www.facebook.com/ntt0512/",
+    icon: FaFacebook,
+  },
+] as const;
 
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
 
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+  const form = useForm<ContactFormValues>({
+    resolver: zodResolver(contactFormSchema),
     defaultValues: {
       name: "",
       email: "",
       subject: "",
       message: "",
+      website: "",
     },
   });
 
-  async function onSubmit(values: z.infer<typeof formSchema>) {
+  async function onSubmit(values: ContactFormValues) {
     setIsSubmitting(true);
     setErrorMsg("");
     
@@ -73,126 +98,155 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-16 w-full max-w-[1200px] px-5 md:px-12 mx-auto">
-      <Reveal>
-        <div className="mb-8 text-left">
-          <h2 className="text-2xl md:text-3xl font-bold font-heading mb-4 text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent w-fit">
-            Get in Touch
-          </h2>
-          <div className="w-20 h-1.5 bg-primary rounded-full mb-5" />
-          <p className="text-base md:text-lg text-muted-foreground max-w-2xl leading-relaxed">
-            Have a question or want to work together? Leave a message below and I&apos;ll get back to you as soon as possible.
-          </p>
-        </div>
-      </Reveal>
+    <section id="contact" className="scroll-mt-24 py-16 w-full max-w-[1200px] px-5 md:px-12 mx-auto">
+      <div className="grid items-stretch gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:gap-10">
+        <Reveal width="100%">
+          <div className="flex h-full flex-col">
+            <h2 className="w-fit bg-gradient-to-r from-primary to-accent bg-clip-text font-heading text-2xl font-bold text-transparent md:text-3xl">
+              Get in Touch
+            </h2>
+            <div className="mt-4 h-1.5 w-20 rounded-full bg-primary" />
+            <p className="mt-5 max-w-md text-base leading-relaxed text-muted-foreground md:text-lg">
+              Have a question or want to work together? Send a message and I&apos;ll get back to you as soon as possible.
+            </p>
 
-      <div className="max-w-[800px] mx-auto">
-        <Reveal delay={0.2} width="100%">
-          <div className="p-5 md:p-8 rounded-[1.5rem] bg-card/40 backdrop-blur-xl border border-border/50 relative overflow-hidden shadow-2xl">
-          {/* Subtle background glow */}
-          <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-primary/10 rounded-full blur-[100px] -z-10 translate-x-1/2 -translate-y-1/2" />
-          
-          {errorMsg && (
-            <Alert variant="destructive" className="mb-6 rounded-xl bg-destructive/10 text-destructive border-destructive/20">
-              <AlertCircle className="h-5 w-5" />
-              <AlertDescription className="text-base ml-2">
-                {errorMsg}
-              </AlertDescription>
-            </Alert>
-          )}
+            <div className="mt-10 space-y-3 lg:mt-auto lg:pt-10">
+              {contactLinks.map((item) => {
+                const Icon = item.icon;
 
-          {isSuccess && (
-            <Alert className="mb-6 rounded-xl bg-green-500/10 text-green-500 border-green-500/20">
-              <CheckCircle2 className="h-5 w-5" />
-              <AlertDescription className="text-base ml-2">
-                Your message has been sent successfully. I will get back to you soon!
-              </AlertDescription>
-            </Alert>
-          )}
+                return (
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group flex items-center gap-4 rounded-2xl border border-border/70 bg-card/40 p-4 transition-[border-color,background-color,transform] duration-200 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-card/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                  >
+                    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-border/70 bg-background/70 text-foreground transition-colors group-hover:border-primary/30 group-hover:text-primary">
+                      <Icon className="h-5 w-5" aria-hidden="true" />
+                    </span>
+                    <span className="min-w-0 flex-1">
+                      <span className="block text-sm font-semibold text-foreground">{item.label}</span>
+                      <span className="mt-1 block truncate text-sm text-muted-foreground">{item.value}</span>
+                    </span>
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-secondary text-muted-foreground transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                      <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+                    </span>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        </Reveal>
 
-          <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <Reveal delay={0.15} width="100%">
+          <div className="flex h-full flex-col rounded-[1.75rem] border border-border/70 bg-card/40 p-2 shadow-[0_28px_80px_-54px_rgba(59,130,246,0.55)]">
+            {errorMsg && (
+              <Alert variant="destructive" className="m-2 mb-3 rounded-xl bg-destructive/10 text-destructive border-destructive/20">
+                <AlertCircle className="h-5 w-5" />
+                <AlertDescription className="ml-2 text-base">
+                  {errorMsg}
+                </AlertDescription>
+              </Alert>
+            )}
+
+            {isSuccess && (
+              <Alert className="m-2 mb-3 rounded-xl bg-emerald-500/10 text-emerald-400 border-emerald-500/20">
+                <CheckCircle2 className="h-5 w-5" />
+                <AlertDescription className="ml-2 text-base">
+                  Your message has been sent successfully. I will get back to you soon!
+                </AlertDescription>
+              </Alert>
+            )}
+
+            <Form {...form}>
+              <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-1 flex-col gap-2">
+                <input
+                  type="text"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  className="hidden"
+                  aria-hidden="true"
+                  {...form.register("website")}
+                />
                 <FormField
                   control={form.control}
                   name="name"
                   render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-base font-medium text-foreground">Name</FormLabel>
+                    <FormItem className="space-y-1">
+                      <FormLabel className="sr-only">Name</FormLabel>
                       <FormControl>
-                        <Input autoComplete="name" placeholder="Your full name" className="bg-background/50 border-border/50 focus-visible:ring-primary h-11 rounded-xl text-base px-4 shadow-sm" {...field} />
+                        <Input autoComplete="name" placeholder="Name" className={fieldClassName} {...field} />
                       </FormControl>
-                      <FormMessage className="text-sm" />
+                      <FormMessage className="px-2 text-xs" />
                     </FormItem>
                   )}
                 />
+
                 <FormField
                   control={form.control}
                   name="email"
                   render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-base font-medium text-foreground">Email</FormLabel>
+                    <FormItem className="space-y-1">
+                      <FormLabel className="sr-only">Email</FormLabel>
                       <FormControl>
-                        <Input type="email" autoComplete="email" inputMode="email" placeholder="Your email address" className="bg-background/50 border-border/50 focus-visible:ring-primary h-11 rounded-xl text-base px-4 shadow-sm" {...field} />
+                        <Input type="email" autoComplete="email" inputMode="email" placeholder="Email" className={fieldClassName} {...field} />
                       </FormControl>
-                      <FormMessage className="text-sm" />
+                      <FormMessage className="px-2 text-xs" />
                     </FormItem>
                   )}
                 />
-              </div>
-              
-              <FormField
-                control={form.control}
-                name="subject"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="text-base font-medium text-foreground">Subject</FormLabel>
-                    <FormControl>
-                      <Input placeholder="Project or collaboration topic" className="bg-background/50 border-border/50 focus-visible:ring-primary h-11 rounded-xl text-base px-4 shadow-sm" {...field} />
-                    </FormControl>
-                    <FormMessage className="text-sm" />
-                  </FormItem>
-                )}
-              />
 
-              <FormField
-                control={form.control}
-                name="message"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="text-base font-medium text-foreground">Message</FormLabel>
-                    <FormControl>
-                      <Textarea 
-                        placeholder="Tell me a little about what you have in mind..."
-                        className="bg-background/50 border-border/50 focus-visible:ring-primary min-h-[160px] resize-none rounded-xl text-base p-4 shadow-sm" 
-                        {...field} 
-                      />
-                    </FormControl>
-                    <FormMessage className="text-sm" />
-                  </FormItem>
-                )}
-              />
+                <FormField
+                  control={form.control}
+                  name="subject"
+                  render={({ field }) => (
+                    <FormItem className="space-y-1">
+                      <FormLabel className="sr-only">Subject</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Subject" className={fieldClassName} {...field} />
+                      </FormControl>
+                      <FormMessage className="px-2 text-xs" />
+                    </FormItem>
+                  )}
+                />
 
-              <Button 
-                type="submit" 
-                className="w-full h-12 rounded-xl text-base font-bold relative overflow-hidden group shadow-lg"
-                disabled={isSubmitting || isSuccess}
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
-                <span className="relative flex items-center justify-center">
+                <FormField
+                  control={form.control}
+                  name="message"
+                  render={({ field }) => (
+                    <FormItem className="flex flex-1 flex-col space-y-1">
+                      <FormLabel className="sr-only">Message</FormLabel>
+                      <FormControl>
+                        <Textarea
+                          placeholder="Message"
+                          className="min-h-[210px] resize-none rounded-xl border-border/70 bg-background/60 px-5 py-4 text-base shadow-inner shadow-black/10 placeholder:text-muted-foreground/70 transition-[border-color,box-shadow,background-color] focus-visible:border-primary focus-visible:bg-background/80 focus-visible:ring-2 focus-visible:ring-primary/20 lg:flex-1"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage className="px-2 text-xs" />
+                    </FormItem>
+                  )}
+                />
+
+                <Button
+                  type="submit"
+                  className="group h-14 w-full rounded-xl bg-foreground text-sm font-semibold text-background hover:bg-foreground/90"
+                  disabled={isSubmitting || isSuccess}
+                >
                   {isSubmitting ? (
                     "Sending Message..."
                   ) : isSuccess ? (
-                    "Message Sent Successfully!"
+                    "Message Sent"
                   ) : (
                     <>
-                      Send Message <Send className="w-5 h-5 ml-2" />
+                      Send Message
+                      <Send className="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                     </>
                   )}
-                </span>
-              </Button>
-            </form>
-          </Form>
+                </Button>
+              </form>
+            </Form>
           </div>
         </Reveal>
       </div>

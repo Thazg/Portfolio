@@ -15,23 +15,37 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Nguyễn Tâm Thắng | AI Engineer",
-  description: "AI Engineer specializing in Machine Learning, Deep Learning, Artificial Intelligence, Software Development, and Data Science.",
+  metadataBase: new URL("https://nguyentamthang.vercel.app"),
+  title: "Nguyễn Tâm Thắng | AI Systems Developer",
+  description: "Computer Science student at HCMUT building full-stack AI systems, including retrieval-augmented generation, streaming APIs, evaluation pipelines, and responsive web products.",
   applicationName: "Nguyễn Tâm Thắng Portfolio",
   authors: [{ name: "Nguyễn Tâm Thắng" }],
   creator: "Nguyễn Tâm Thắng",
   publisher: "Nguyễn Tâm Thắng",
-  keywords: ["AI Engineer", "Machine Learning", "Deep Learning", "Software Development", "Data Science", "Nguyễn Tâm Thắng"],
+  keywords: ["AI Systems Developer", "RAG", "FastAPI", "React", "Next.js", "Computer Science", "HCMUT", "Nguyễn Tâm Thắng"],
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "Nguyễn Tâm Thắng | AI Engineer",
-    description: "AI Engineer specializing in Machine Learning, Deep Learning, Artificial Intelligence, Software Development, and Data Science.",
+    title: "Nguyễn Tâm Thắng | AI Systems Developer",
+    description: "Full-stack AI systems, retrieval engineering, evaluation, and production-minded software development.",
     type: "website",
+    url: "/",
     siteName: "Nguyễn Tâm Thắng Portfolio",
+    images: [
+      {
+        url: "/portfolio.png",
+        width: 1250,
+        height: 712,
+        alt: "Nguyễn Tâm Thắng portfolio home page",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nguyễn Tâm Thắng | AI Engineer",
-    description: "AI Engineer specializing in Machine Learning, Deep Learning, Artificial Intelligence, Software Development, and Data Science.",
+    title: "Nguyễn Tâm Thắng | AI Systems Developer",
+    description: "Full-stack AI systems, retrieval engineering, evaluation, and production-minded software development.",
+    images: ["/portfolio.png"],
   },
 };
 

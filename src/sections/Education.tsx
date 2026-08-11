@@ -6,7 +6,7 @@ import { GraduationCap } from "lucide-react";
 
 export default function Education() {
   return (
-    <section id="education" className="py-16 w-full max-w-[1200px] px-5 md:px-12">
+    <section id="education" className="scroll-mt-24 py-16 w-full max-w-[1200px] px-5 md:px-12">
       <Reveal>
         <div className="mb-8 text-left">
           <h2 className="text-2xl md:text-3xl font-bold font-heading mb-4 text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent w-fit">
@@ -43,19 +43,6 @@ export default function Education() {
                   </div>
                 </div>
                 
-                <div className="mt-4 pt-4 border-t border-border/50">
-                  <h4 className="text-base font-medium text-foreground mb-3">Relevant Coursework:</h4>
-                  <div className="flex flex-wrap gap-2.5">
-                    {edu.coursework.map((course, cIdx) => (
-                      <span
-                        key={cIdx}
-                        className="px-3 py-1.5 rounded-full bg-secondary/50 text-muted-foreground text-xs font-medium"
-                      >
-                        {course}
-                      </span>
-                    ))}
-                  </div>
-                </div>
               </div>
             </StaggerItem>
           ))}

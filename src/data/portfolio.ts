@@ -7,127 +7,86 @@ import {
 
 export const PORTFOLIO_DATA = {
   name: "Nguyễn Tâm Thắng",
-  role: "AI Engineer",
-  headline: "AI Engineer | Machine Learning | Deep Learning | Software Development",
-  intro: "I build intelligent systems, machine learning solutions, and modern software applications. My interests include Artificial Intelligence, Data Science, Competitive Programming, and scalable software engineering.",
+  role: "Computer Science Student · AI Systems Developer",
+  headline: "RAG Systems | Full-Stack AI Engineering | Software Development",
+  intro:
+    "I build complete AI products—from retrieval and evaluation pipelines to streaming APIs and responsive web interfaces. My current focus is making RAG systems grounded, measurable, and useful in production.",
   about: {
-    bio: "I am a dedicated AI Engineer and Software Developer with a strong foundation in Artificial Intelligence, Machine Learning, and Deep Learning. I specialize in building intelligent algorithms, predictive models, and scalable architectures that solve complex real-world problems. Whether it's training neural networks or deploying robust backend microservices, I am passionate about the intersection of data and software engineering.",
-    stats: [
-      { label: "AI Models Deployed", value: "10+" },
-      { label: "Years Coding", value: "5+" },
-      { label: "Projects Completed", value: "25+" },
-      { label: "Hackathons Won", value: "3" },
+    bio: "I am a Computer Science student at Ho Chi Minh City University of Technology (HCMUT - VNU-HCM), focused on building reliable AI-powered software. I work across retrieval systems, backend APIs, frontend product engineering, testing, and deployment.",
+    secondary:
+      "My main project, Nova RAG, turns private documents into citation-backed answers through hybrid retrieval and streamed generation. I use projects like this to learn the full engineering lifecycle instead of stopping at a model demo.",
+    focus: [
+      "Building and evaluating retrieval-augmented generation systems",
+      "Connecting Python AI services with production web interfaces",
+      "Writing tests, benchmarks, and deployment tooling alongside features",
     ],
   },
   skills: [
     {
-      category: "AI & Machine Learning",
+      category: "Retrieval & AI",
       icon: LineChart,
-      items: ["Python", "PyTorch", "TensorFlow", "Scikit-Learn", "NumPy", "Pandas", "LangChain", "OpenAI API"],
+      items: ["RAG", "BM25", "FAISS", "Hybrid Search", "RRF", "Retrieval Evaluation", "Groq", "Ollama"],
     },
     {
-      category: "Software Engineering",
+      category: "Backend",
       icon: Terminal,
-      items: ["C++", "Java", "TypeScript", "React", "Next.js", "Node.js", "Go"],
+      items: ["Python", "FastAPI", "Pydantic", "REST APIs", "Server-Sent Events", "Authentication"],
     },
     {
-      category: "Data & Databases",
+      category: "Frontend",
       icon: Database,
-      items: ["PostgreSQL", "MongoDB", "Redis", "Vector Databases", "SQL"],
+      items: ["TypeScript", "React", "Next.js", "Tailwind CSS", "Zustand", "Framer Motion"],
     },
     {
-      category: "Tools & Infrastructure",
+      category: "Quality & Delivery",
       icon: Settings,
-      items: ["Git", "Docker", "Linux", "VS Code", "AWS", "CI/CD"],
+      items: ["Pytest", "Playwright", "GitHub Actions", "Docker", "Vercel", "Render"],
     },
   ],
   projects: [
     {
-      title: "Nova AI Agent",
-      description: "An autonomous AI agent capable of planning and executing complex coding tasks, integrating with major LLMs to provide real-time architectural insights and automated pull request reviews.",
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200",
-      tech: ["Python", "LangChain", "OpenAI", "React", "FastAPI"],
-      github: "https://github.com",
-    },
-    {
-      title: "Deep Vision Analyzer",
-      description: "A highly optimized computer vision pipeline using PyTorch for real-time anomaly detection in industrial manufacturing streams, achieving 99.8% accuracy on edge devices.",
-      image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200",
-      tech: ["Python", "PyTorch", "OpenCV", "TensorRT", "C++"],
-      github: "https://github.com",
-    },
-    {
-      title: "Scalable RAG System",
-      description: "Enterprise-grade Retrieval-Augmented Generation system using vector databases and LangChain to index and query over 1 million internal company documents with sub-second latency.",
-      image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200",
-      tech: ["TypeScript", "Next.js", "Pinecone", "OpenAI", "Node.js"],
-      github: "https://github.com",
-    },
-    {
-      title: "Predictive Healthcare Analytics",
-      description: "Machine learning platform analyzing electronic health records (EHR) to predict patient readmission rates, built with Scikit-Learn and deployed via scalable microservices.",
-      image: "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&q=80&w=1200",
-      tech: ["Python", "Scikit-Learn", "Pandas", "Docker", "AWS"],
-      github: "https://github.com",
-    },
-  ],
-  experience: [
-    {
-      company: "AI Research Lab",
-      position: "Machine Learning Researcher",
-      duration: "2026 - Present",
-      responsibilities: [
-        "Researched and implemented novel transformer architectures for natural language understanding.",
-        "Optimized deep learning training pipelines, reducing epoch times by 35% across multi-GPU setups.",
-        "Published findings on efficient parameter tuning in top-tier AI conferences.",
+      title: "Nova RAG Workspace",
+      description:
+        "A full-stack workspace for asking grounded questions about private documents, with account-isolated indexes, hybrid retrieval, source citations, and streamed responses.",
+      image: "/nova-rag.png",
+      imageAlt: "Nova RAG layered product mark",
+      imageClassName: "object-contain p-10 md:p-12",
+      tech: ["React 19", "FastAPI", "BM25 + FAISS", "SSE", "Docker"],
+      highlights: [
+        "Hybrid BM25 and FAISS retrieval with reciprocal-rank fusion",
+        "Citation-backed token streaming with cancellation and regeneration",
+        "Retrieval benchmarks, backend tests, CI, and Playwright E2E coverage",
       ],
+      github: "https://github.com/Thazg/NovaRAGChatBot",
+      demo: "https://novachatbot.vercel.app/",
+    },
+    {
+      title: "Personal Portfolio",
+      description:
+        "A responsive portfolio built to present engineering work clearly, with accessible navigation, purposeful motion, optimized media, and a validated contact workflow.",
+      image: "/portfolio.png",
+      imageAlt: "Nguyễn Tâm Thắng portfolio home page",
+      imageClassName: "object-cover object-top",
+      tech: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS", "Framer Motion"],
+      highlights: [
+        "Responsive single-page information architecture",
+        "Keyboard focus states and reduced-motion support",
+        "Server-backed contact form with structured validation",
+      ],
+      demo: "https://nguyentamthang.vercel.app/",
     },
   ],
   education: [
     {
-      university: "National University",
+      university: "Ho Chi Minh City University of Technology (HCMUT - VNU-HCM)",
       degree: "B.S. in Computer Science",
       duration: "2025 - 2029",
       gpa: "4.0 / 4.0",
-      coursework: [
-        "Artificial Intelligence",
-        "Machine Learning",
-        "Data Structures & Algorithms",
-        "Deep Learning",
-        "Distributed Systems",
-      ],
-    },
-  ],
-  achievements: [
-    { title: "First Place, National AI Hackathon", count: 1 },
-    { title: "Open Source Contributions", count: 100 },
-    { title: "Machine Learning Certifications", count: 3 },
-    { title: "Published Research Papers", count: 2 },
-  ],
-  blog: [
-    {
-      title: "The Evolution of Transformer Architectures in 2024",
-      date: "Nov 15, 2023",
-      thumbnail: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=800",
-      link: "#",
-    },
-    {
-      title: "Deploying PyTorch Models to Edge Devices using TensorRT",
-      date: "Sep 28, 2023",
-      thumbnail: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
-      link: "#",
-    },
-    {
-      title: "Mastering Vector Databases for RAG Applications",
-      date: "Aug 10, 2023",
-      thumbnail: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&q=80&w=800",
-      link: "#",
     },
   ],
   socials: {
-    github: "https://github.com",
-    linkedin: "https://linkedin.com",
-    email: "mailto:hello@example.com",
-    facebook: "https://facebook.com",
+    github: "https://github.com/Thazg",
+    linkedin: "https://www.linkedin.com/in/thangnguyen0512/",
+    facebook: "https://www.facebook.com/ntt0512/",
   },
 };

@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="flex items-center justify-center pt-28 md:pt-32 pb-16 w-full max-w-[1100px] px-5 md:px-8 relative overflow-hidden">
+    <section id="home" className="scroll-mt-24 flex items-center justify-center pt-28 md:pt-32 pb-16 w-full max-w-[1100px] px-5 md:px-8 relative overflow-hidden">
       {/* Keep the ambient light on the copy side so the portrait edge stays clean. */}
       <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[#60A5FA]/[0.03] rounded-full blur-[100px] -z-10" />
 

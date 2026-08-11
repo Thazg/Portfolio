@@ -1,6 +1,6 @@
 # Nguyễn Tâm Thắng — Portfolio
 
-Personal portfolio for Nguyễn Tâm Thắng, an AI Engineer and software developer studying at Ho Chi Minh City University of Technology (HCMUT). The site presents selected projects, technical skills, experience, education, achievements, writing, and contact information in a responsive single-page experience.
+Personal portfolio for Nguyễn Tâm Thắng, a Computer Science student and AI systems developer at Ho Chi Minh City University of Technology (HCMUT). The site focuses on verifiable engineering work, particularly the full-stack Nova RAG workspace, alongside technical skills, education, and contact information.
 
 [Live site](https://nguyentamthang.vercel.app/) · [LinkedIn](https://www.linkedin.com/in/thangnguyen0512/) · [Facebook](https://www.facebook.com/ntt0512/)
 
@@ -9,10 +9,10 @@ Personal portfolio for Nguyễn Tâm Thắng, an AI Engineer and software develo
 ## Highlights
 
 - Responsive layout for mobile, tablet, and desktop screens
-- Structured sections for projects, skills, experience, education, and achievements
+- Evidence-focused sections for projects, skills, education, and contact information
 - Focused motion and reveal interactions with reduced-motion support
 - Accessible navigation, keyboard focus states, and readable content widths
-- Contact form with client-side validation and email delivery through Resend
+- Contact form with shared client/server validation and email delivery through Resend
 - Next.js image and font optimization with a production-ready App Router setup
 
 ## Technology
@@ -68,6 +68,7 @@ Create a `.env.local` file if you want the contact form to send email:
 ```env
 RESEND_API_KEY=your_resend_api_key
 EMAIL_ADDRESS=your_destination_email
+EMAIL_FROM="Portfolio Contact <hello@your-verified-domain.com>"
 ```
 
 Then start the development server:
@@ -89,7 +90,7 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Contact form configuration
 
-The contact form posts to `/api/contact`. The server route validates required fields and sends the message through Resend using the environment variables above. For production, configure both variables in the deployment environment and replace the Resend testing sender with a verified domain when available.
+The contact form posts to `/api/contact`. The same Zod schema validates input in the browser and on the server, field lengths are limited, and a honeypot rejects common form bots. Messages are sent as plain text through Resend to avoid injecting user-provided HTML. `EMAIL_FROM` is optional during local testing but should use a verified sender domain in production.
 
 ## Deployment
 

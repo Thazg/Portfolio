@@ -1,19 +1,26 @@
 import { NextResponse } from "next/server";
+import { contactFormSchema } from "@/lib/contact-schema";
 
 export async function POST(req: Request) {
   try {
-    const body = await req.json();
-    const { name, email, subject, message } = body;
+    const contentLength = Number(req.headers.get("content-length") ?? 0);
+    if (contentLength > 10_000) {
+      return NextResponse.json({ error: "Request is too large" }, { status: 413 });
+    }
 
-    if (!name || !email || !subject || !message) {
+    const result = contactFormSchema.safeParse(await req.json());
+    if (!result.success) {
       return NextResponse.json(
-        { error: "Missing required fields" },
+        { error: "Invalid form data" },
         { status: 400 }
       );
     }
 
+    const { name, email, subject, message } = result.data;
+
     const resendApiKey = process.env.RESEND_API_KEY;
     const myEmail = process.env.EMAIL_ADDRESS;
+    const fromEmail = process.env.EMAIL_FROM ?? "Portfolio Contact <onboarding@resend.dev>";
 
     if (!resendApiKey || !myEmail) {
       console.error("Missing RESEND_API_KEY or EMAIL_ADDRESS environment variables.");
@@ -30,16 +37,18 @@ export async function POST(req: Request) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "Portfolio Contact <onboarding@resend.dev>", // Resend testing domain
+        from: fromEmail,
         to: myEmail,
-        subject: `[Portfolio] ${subject}`,
-        html: `
-          <h2>New Message from ${name}</h2>
-          <p><strong>Email:</strong> ${email}</p>
-          <p><strong>Subject:</strong> ${subject}</p>
-          <hr />
-          <p>${message.replace(/\n/g, "<br>")}</p>
-        `,
+        subject: `[Portfolio] ${subject.replace(/[\r\n]+/g, " ")}`,
+        text: [
+          "New portfolio message",
+          "",
+          `Name: ${name}`,
+          `Email: ${email}`,
+          `Subject: ${subject}`,
+          "",
+          message,
+        ].join("\n"),
         reply_to: email,
       }),
     });
