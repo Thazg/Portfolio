@@ -32,9 +32,11 @@ export default function About() {
               {PORTFOLIO_DATA.about.focus.map((item, idx) => (
                 <div
                   key={item}
-                  className="grid grid-cols-[2rem_1fr] gap-3 border-t border-border/60 py-4 first:border-t-0 first:pt-1 last:pb-0"
+                  className="grid grid-cols-[2.5rem_minmax(0,1fr)] items-center gap-3 border-t border-border/60 py-4 first:border-t-0 first:pt-1 last:pb-0 sm:grid-cols-[3rem_minmax(0,1fr)] sm:gap-4"
                 >
-                  <span className="font-mono text-xs text-muted-foreground">0{idx + 1}</span>
+                  <span className="self-center text-center font-mono text-base leading-none text-muted-foreground sm:text-lg">
+                    0{idx + 1}
+                  </span>
                   <p className="text-sm leading-relaxed text-foreground/90">{item}</p>
                 </div>
               ))}
