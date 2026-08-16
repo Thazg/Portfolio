@@ -50,7 +50,9 @@ export const PORTFOLIO_DATA = {
         "A full-stack workspace for asking grounded questions about private documents, with account-isolated indexes, hybrid retrieval, source citations, and streamed responses.",
       image: "/nova-rag.png",
       imageAlt: "Nova RAG layered product mark",
-      imageClassName: "object-contain p-10 md:p-12",
+      imageClassName:
+        "object-contain p-10 drop-shadow-[0_18px_26px_rgba(139,92,246,0.28)] md:p-12",
+      imageSurfaceClassName: "bg-[#22273a]",
       tech: ["React 19", "FastAPI", "BM25 + FAISS", "SSE", "Docker"],
       highlights: [
         "Hybrid BM25 and FAISS retrieval with reciprocal-rank fusion",
@@ -67,12 +69,14 @@ export const PORTFOLIO_DATA = {
       image: "/portfolio.png",
       imageAlt: "Nguyễn Tâm Thắng portfolio home page",
       imageClassName: "object-cover object-top",
+      imageSurfaceClassName: "bg-background/70",
       tech: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS", "Framer Motion"],
       highlights: [
         "Responsive single-page information architecture",
         "Keyboard focus states and reduced-motion support",
         "Server-backed contact form with structured validation",
       ],
+      github: "https://github.com/Thazg/Portfolio",
       demo: "https://nguyentamthang.vercel.app/",
     },
   ],
