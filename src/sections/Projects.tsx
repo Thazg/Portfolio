@@ -25,9 +25,7 @@ export default function Projects() {
         {PORTFOLIO_DATA.projects.map((project) => (
           <StaggerItem key={project.title} className="group flex min-w-0">
             <Card className="flex h-full min-w-0 w-full flex-col overflow-hidden border-border/60 bg-card/35 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-[0_20px_45px_-28px_rgba(59,130,246,0.55)]">
-              <div
-                className={`relative h-48 w-full overflow-hidden border-b border-border/50 md:h-56 ${project.imageSurfaceClassName}`}
-              >
+              <div className="relative h-48 w-full overflow-hidden border-b border-border/50 bg-background/70 md:h-56">
                 <Image
                   src={project.image}
                   alt={project.imageAlt}

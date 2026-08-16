@@ -51,8 +51,7 @@ export const PORTFOLIO_DATA = {
       image: "/nova-rag.png",
       imageAlt: "Nova RAG layered product mark",
       imageClassName:
-        "object-contain p-10 drop-shadow-[0_18px_26px_rgba(139,92,246,0.28)] md:p-12",
-      imageSurfaceClassName: "bg-[#22273a]",
+        "object-contain p-7 brightness-125 contrast-110 drop-shadow-[0_16px_24px_rgba(139,92,246,0.38)] md:p-9",
       tech: ["React 19", "FastAPI", "BM25 + FAISS", "SSE", "Docker"],
       highlights: [
         "Hybrid BM25 and FAISS retrieval with reciprocal-rank fusion",
@@ -69,7 +68,6 @@ export const PORTFOLIO_DATA = {
       image: "/portfolio.png",
       imageAlt: "Nguyễn Tâm Thắng portfolio home page",
       imageClassName: "object-cover object-top",
-      imageSurfaceClassName: "bg-background/70",
       tech: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS", "Framer Motion"],
       highlights: [
         "Responsive single-page information architecture",
