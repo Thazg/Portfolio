@@ -7,10 +7,10 @@ import {
 
 export const PORTFOLIO_DATA = {
   name: "Nguyễn Tâm Thắng",
-  role: "Computer Science Student · AI Systems Developer",
-  headline: "RAG Systems | Full-Stack AI Engineering | Software Development",
+  role: "Computer Science Student",
+  headline: "AI Engineering | Full Stack Development | Software Engineering",
   intro:
-    "I build complete AI products—from retrieval and evaluation pipelines to streaming APIs and responsive web interfaces. My current focus is making RAG systems grounded, measurable, and useful in production.",
+    "I build practical software across AI, web applications, and backend systems, turning early concepts into reliable products for real users. I enjoy solving real problems through thoughtful architecture, clean interfaces, testing, and continuous iteration.",
   about: {
     bio: "I am a Computer Science student at Ho Chi Minh City University of Technology (HCMUT - VNU-HCM), focused on building reliable AI-powered software. I work across retrieval systems, backend APIs, frontend product engineering, testing, and deployment.",
     secondary:

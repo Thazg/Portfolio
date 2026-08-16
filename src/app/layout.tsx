@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk } from "next/font/google";
+import { Nunito, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
-const inter = Inter({
+const nunito = Nunito({
   variable: "--font-sans",
-  subsets: ["latin"],
+  weight: "variable",
+  subsets: ["latin", "vietnamese"],
+  display: "swap",
 });
 
 const spaceGrotesk = Space_Grotesk({
@@ -57,7 +59,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark scroll-smooth">
       <body
-        className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased bg-background text-foreground selection:bg-primary/30 selection:text-primary-foreground min-h-screen flex flex-col`}
+        className={`${nunito.variable} ${spaceGrotesk.variable} font-sans antialiased bg-background text-foreground selection:bg-primary/30 selection:text-primary-foreground min-h-screen flex flex-col`}
       >
         <Navbar />
         <main className="flex-1 w-full flex flex-col items-center">
