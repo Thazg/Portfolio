@@ -20,10 +20,10 @@ export default function Education() {
         <StaggerChildren>
           {PORTFOLIO_DATA.education.map((edu, idx) => (
             <StaggerItem key={idx} className="relative pl-10 md:pl-0">
-              <div className="hidden md:flex absolute -left-[57px] w-12 h-11 bg-card rounded-full border-[3px] border-accent items-center justify-center text-accent shadow-[0_0_20px_rgba(139,92,246,0.3)]">
+              <div className="absolute -left-[57px] top-3 hidden h-11 w-12 items-center justify-center rounded-full border-[3px] border-accent bg-card text-accent shadow-[0_0_20px_rgba(139,92,246,0.3)] md:flex">
                 <GraduationCap className="w-5 h-5" />
               </div>
-              <div className="md:hidden absolute -left-[13px] top-2 w-6 h-6 bg-card rounded-full border-[3px] border-accent" />
+              <div className="absolute -left-[13px] top-5 h-6 w-6 rounded-full border-[3px] border-accent bg-card md:hidden" />
               
               <div className="md:ml-16 p-5 rounded-2xl bg-card/40 backdrop-blur-md border border-border/50 hover:border-accent/50 transition-colors shadow-lg">
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-3">
