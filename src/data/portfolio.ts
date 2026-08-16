@@ -43,6 +43,14 @@ export const PORTFOLIO_DATA = {
       items: ["Pytest", "Playwright", "GitHub Actions", "Docker", "Vercel", "Render"],
     },
   ],
+  certificates: [
+    {
+      name: "IELTS",
+      score: "6.5",
+      level: "CEFR B2",
+      category: "English proficiency",
+    },
+  ],
   projects: [
     {
       title: "Nova RAG Workspace",

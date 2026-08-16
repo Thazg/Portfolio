@@ -98,7 +98,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="scroll-mt-24 py-16 w-full max-w-[1200px] px-5 md:px-12 mx-auto">
+    <section id="contact" className="mx-auto w-full max-w-[1200px] scroll-mt-24 px-5 pb-16 pt-16 md:px-12">
       <div className="grid items-stretch gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:gap-10">
         <Reveal width="100%">
           <div className="flex h-full flex-col">

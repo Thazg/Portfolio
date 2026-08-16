@@ -11,7 +11,7 @@ import Image from "next/image";
 
 export default function Projects() {
   return (
-    <section id="projects" className="scroll-mt-24 py-16 w-full max-w-[1200px] px-5 md:px-12">
+    <section id="projects" className="w-full max-w-[1200px] scroll-mt-24 px-5 pt-16 md:px-12">
       <Reveal>
         <div className="mb-8 text-left">
           <h2 className="text-2xl md:text-3xl font-bold font-heading mb-4 text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent w-fit">

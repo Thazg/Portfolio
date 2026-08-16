@@ -3,10 +3,11 @@
 import { PORTFOLIO_DATA } from "@/data/portfolio";
 import { Reveal, StaggerChildren, StaggerItem } from "@/components/animations/Reveal";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Award } from "lucide-react";
 
 export default function Skills() {
   return (
-    <section id="skills" className="scroll-mt-24 py-16 w-full max-w-[1200px] px-5 md:px-12">
+    <section id="skills" className="w-full max-w-[1200px] scroll-mt-24 px-5 pt-16 md:px-12">
       <Reveal>
         <div className="mb-8 text-left">
           <h2 className="text-2xl md:text-3xl font-bold font-heading mb-4 text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent w-fit">
@@ -50,6 +51,58 @@ export default function Skills() {
           );
         })}
       </StaggerChildren>
+
+      <Reveal delay={0.15} width="100%">
+        <div className="mt-16">
+          <div className="mb-8 text-left">
+            <h3 className="mb-4 w-fit bg-gradient-to-r from-primary to-accent bg-clip-text font-heading text-2xl font-bold text-transparent md:text-3xl">
+              Certificates
+            </h3>
+            <div className="h-1.5 w-20 rounded-full bg-primary" />
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-2">
+            {PORTFOLIO_DATA.certificates.map((certificate) => (
+              <div
+                key={certificate.name}
+                className="flex items-center gap-4 rounded-2xl border border-border/50 bg-card/40 p-4 transition-colors hover:border-primary/50 sm:p-5"
+              >
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                  <Award className="h-6 w-6" aria-hidden="true" />
+                </div>
+
+                <div className="min-w-0 flex-1">
+                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground">
+                    {certificate.category}
+                  </p>
+                  <h4 className="mt-1 font-heading text-lg font-bold text-foreground">
+                    {certificate.name}
+                  </h4>
+                </div>
+
+                <div className="grid shrink-0 grid-cols-2 divide-x divide-border/70 text-center">
+                  <div className="px-3">
+                    <span className="block font-heading text-xl font-bold text-primary">
+                      {certificate.score}
+                    </span>
+                    <span className="mt-0.5 block text-[0.65rem] font-medium uppercase tracking-wider text-muted-foreground">
+                      Overall
+                    </span>
+                  </div>
+                  <div className="px-3">
+                    <span className="block font-heading text-base font-bold text-foreground">
+                      {certificate.level.replace("CEFR ", "")}
+                    </span>
+                    <span className="mt-1 block text-[0.65rem] font-medium uppercase tracking-wider text-muted-foreground">
+                      CEFR
+                    </span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Reveal>
     </section>
   );
 }
