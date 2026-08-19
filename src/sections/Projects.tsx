@@ -41,7 +41,14 @@ export default function Projects() {
                 </div>
 
                 <CardHeader className="pt-5">
-                  <CardTitle className="font-heading text-xl">{project.title}</CardTitle>
+                  <div className="flex flex-wrap items-start justify-between gap-3">
+                    <CardTitle className="font-heading text-xl">{project.title}</CardTitle>
+                    {project.version && (
+                      <Badge variant="outline" className="shrink-0 border-primary/30 text-primary">
+                        {project.version}
+                      </Badge>
+                    )}
+                  </div>
                 </CardHeader>
 
                 <CardContent className="flex flex-grow flex-col gap-5">

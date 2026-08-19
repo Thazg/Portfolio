@@ -7,6 +7,7 @@ import {
 
 export type PortfolioProject = {
   title: string;
+  version?: string;
   description: string;
   image?: string;
   imageAlt?: string;
@@ -23,7 +24,7 @@ export const PORTFOLIO_DATA = {
   role: "Computer Science Student",
   headline: "AI Engineering | Machine Learning | RAG Systems",
   intro:
-    "I build practical software across AI, web applications, and backend systems, turning early concepts into reliable products for real users. I enjoy solving real problems through thoughtful architecture, clean interfaces, testing, and continuous iteration.",
+    "I build practical AI systems with a focus on retrieval, evaluation, and reliable deployment. I enjoy experimenting with different approaches, measuring what works, and turning those experiments into usable applications.",
   about: {
     bio: "I am a Computer Science student at Ho Chi Minh City University of Technology (HCMUT - VNU-HCM), focused on building reliable AI-powered software. I work across retrieval systems, backend APIs, frontend product engineering, testing, and deployment.",
     secondary:
@@ -38,7 +39,7 @@ export const PORTFOLIO_DATA = {
     {
       category: "Retrieval & AI",
       icon: LineChart,
-      items: ["RAG", "BM25", "FAISS", "Hybrid Search", "RRF", "Retrieval Evaluation", "Groq", "Ollama"],
+      items: ["RAG", "BGE", "BM25", "Hybrid Search", "RRF", "Qdrant", "FAISS", "FastEmbed", "Retrieval Evaluation", "Groq", "Ollama"],
     },
     {
       category: "Backend",
@@ -67,6 +68,7 @@ export const PORTFOLIO_DATA = {
   projects: [
     {
       title: "Enterprise Knowledge Intelligence Platform",
+      version: "v1.0.0",
       description:
         "An end-to-end knowledge platform that turns private documents into grounded, citation-backed answers through production-ready ingestion, retrieval, evaluation, and generation pipelines.",
       image: "/knowledge-intelligence-platform-art.png",
@@ -75,7 +77,7 @@ export const PORTFOLIO_DATA = {
       tech: ["Python", "FastAPI", "Qdrant", "Docker", "RAG"],
       highlights: [
         "Selected Weighted RRF after benchmarking five retrieval strategies on 100 queries, reaching 0.7247 MRR and 0.9300 Hit@10",
-        "Achieved exact top-10 ranking parity on 100 of 100 queries between FastEmbed sparse vectors in Qdrant Cloud and local BM25",
+        "Achieved exact top-10 ranking parity on 100/100 queries between custom BM25-compatible sparse vectors in Qdrant Cloud and the local rank_bm25 implementation",
         "Added validation, readiness checks, timeouts, admission control, request IDs, Prometheus metrics, CI, and regression tests",
         "Deployed with Render, Qdrant Cloud, and Groq in a 130.5 MB Docker image within a 512 MiB memory budget",
       ],
