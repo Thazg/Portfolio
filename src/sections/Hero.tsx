@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { PORTFOLIO_DATA } from "@/data/portfolio";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Mail } from "lucide-react";
+import { ArrowRight, FileText } from "lucide-react";
 import Image from "next/image";
 
 export default function Hero() {
@@ -43,7 +43,7 @@ export default function Hero() {
               {PORTFOLIO_DATA.role}
             </p>
 
-            <p className="text-base md:text-lg text-muted-foreground/80 max-w-2xl leading-relaxed font-medium">
+            <p className="max-w-[34rem] text-justify text-base font-medium leading-relaxed text-muted-foreground">
               {PORTFOLIO_DATA.intro}
             </p>
           </div>
@@ -55,8 +55,8 @@ export default function Hero() {
               </a>
             </Button>
             <Button size="lg" variant="outline" className="rounded-xl h-11 px-5 text-base font-semibold border-white/10 bg-white/5 hover:bg-white/10 backdrop-blur-md transition-all hover:-translate-y-1" asChild>
-              <a href="#contact">
-                <Mail className="mr-2 w-4 h-4" /> Contact Me
+              <a href="/Nguyen-Tam-Thang-CV.pdf" target="_blank" rel="noreferrer">
+                <FileText className="mr-2 w-4 h-4" /> View My Résumé
               </a>
             </Button>
           </div>

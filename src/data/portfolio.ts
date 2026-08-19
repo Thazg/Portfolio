@@ -5,6 +5,19 @@ import {
   Terminal,
 } from "lucide-react";
 
+export type PortfolioProject = {
+  title: string;
+  description: string;
+  image?: string;
+  imageAlt?: string;
+  imageClassName?: string;
+  tech: string[];
+  highlights: string[];
+  github?: string;
+  demo?: string;
+  demoLabel?: string;
+};
+
 export const PORTFOLIO_DATA = {
   name: "Nguyễn Tâm Thắng",
   role: "Computer Science Student",
@@ -14,11 +27,11 @@ export const PORTFOLIO_DATA = {
   about: {
     bio: "I am a Computer Science student at Ho Chi Minh City University of Technology (HCMUT - VNU-HCM), focused on building reliable AI-powered software. I work across retrieval systems, backend APIs, frontend product engineering, testing, and deployment.",
     secondary:
-      "My main project, Nova RAG, turns private documents into citation-backed answers through hybrid retrieval and streamed generation. I use projects like this to learn the full engineering lifecycle instead of stopping at a model demo.",
+      "My project work includes Nova RAG and the Enterprise Knowledge Intelligence Platform, where I build citation-backed systems with hybrid retrieval, evaluation, and streamed generation. I use these projects to learn the full engineering lifecycle instead of stopping at a model demo.",
     focus: [
-      "Building and evaluating retrieval-augmented generation systems",
-      "Connecting Python AI services with production web interfaces",
-      "Writing tests, benchmarks, and deployment tooling alongside features",
+      "Building knowledge systems with grounded retrieval and cited generation",
+      "Benchmarking retrieval quality to make measurable engineering decisions",
+      "Shipping reliable AI products with robust APIs, observability, testing, and deployment",
     ],
   },
   skills: [
@@ -53,6 +66,24 @@ export const PORTFOLIO_DATA = {
   ],
   projects: [
     {
+      title: "Enterprise Knowledge Intelligence Platform",
+      description:
+        "An end-to-end knowledge platform that turns private documents into grounded, citation-backed answers through production-ready ingestion, retrieval, evaluation, and generation pipelines.",
+      image: "/knowledge-intelligence-platform-art.png",
+      imageAlt: "Editorial illustration of documents flowing through a retrieval index into a cited answer",
+      imageClassName: "object-cover",
+      tech: ["Python", "FastAPI", "Qdrant", "Docker", "RAG"],
+      highlights: [
+        "Selected Weighted RRF after benchmarking five retrieval strategies on 100 queries, reaching 0.7247 MRR and 0.9300 Hit@10",
+        "Achieved exact top-10 ranking parity on 100 of 100 queries between FastEmbed sparse vectors in Qdrant Cloud and local BM25",
+        "Added validation, readiness checks, timeouts, admission control, request IDs, Prometheus metrics, CI, and regression tests",
+        "Deployed with Render, Qdrant Cloud, and Groq in a 130.5 MB Docker image within a 512 MiB memory budget",
+      ],
+      github: "https://github.com/Thazg/knowledge-intelligence-platform",
+      demo: "https://enterprise-kip-api.onrender.com/docs",
+      demoLabel: "API Docs",
+    },
+    {
       title: "Nova RAG Workspace",
       description:
         "A full-stack workspace for asking grounded questions about private documents, with account-isolated indexes, hybrid retrieval, source citations, and streamed responses.",
@@ -85,7 +116,7 @@ export const PORTFOLIO_DATA = {
       github: "https://github.com/Thazg/Portfolio",
       demo: "https://nguyentamthang.vercel.app/",
     },
-  ],
+  ] as PortfolioProject[],
   education: [
     {
       university: "Ho Chi Minh City University of Technology (HCMUT - VNU-HCM)",

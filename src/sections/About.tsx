@@ -17,13 +17,13 @@ export default function About() {
 
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12 lg:items-start">
         <Reveal width="100%">
-          <div className="text-base md:text-base text-muted-foreground leading-relaxed space-y-5 font-medium">
+          <div className="space-y-5 text-justify text-base font-medium leading-relaxed text-muted-foreground md:text-base">
             <p>{PORTFOLIO_DATA.about.bio}</p>
             <p>{PORTFOLIO_DATA.about.secondary}</p>
           </div>
         </Reveal>
 
-        <Reveal delay={0.15} width="100%">
+        <Reveal delay={0.15} width="100%" className="lg:-mt-8">
           <div className="rounded-2xl border border-border/60 bg-card/30 p-5 md:p-6">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
               Current focus
@@ -32,9 +32,9 @@ export default function About() {
               {PORTFOLIO_DATA.about.focus.map((item, idx) => (
                 <div
                   key={item}
-                  className="grid grid-cols-[2.5rem_minmax(0,1fr)] items-center gap-3 border-t border-border/60 py-4 first:border-t-0 first:pt-1 last:pb-0 sm:grid-cols-[3rem_minmax(0,1fr)] sm:gap-4"
+                  className="grid grid-cols-[2.75rem_minmax(0,1fr)] items-center gap-3 border-t border-border/60 py-4 first:border-t-0 first:pt-1 last:pb-0 sm:grid-cols-[3.25rem_minmax(0,1fr)] sm:gap-4"
                 >
-                  <span className="self-center text-center font-mono text-base leading-none text-muted-foreground sm:text-lg">
+                  <span className="self-center text-center font-mono text-lg leading-none text-muted-foreground sm:text-xl">
                     0{idx + 1}
                   </span>
                   <p className="text-sm leading-relaxed text-foreground/90">{item}</p>
