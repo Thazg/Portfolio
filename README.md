@@ -1,6 +1,6 @@
-# Nguyễn Tâm Thắng — Portfolio
+# Nguyen Tam Thang — Portfolio
 
-Personal portfolio for Nguyễn Tâm Thắng, a Computer Science student and AI systems developer at Ho Chi Minh City University of Technology (HCMUT). The site focuses on verifiable engineering work, particularly the full-stack Nova RAG workspace, alongside technical skills, education, and contact information.
+Personal portfolio for Nguyen Tam Thang, a Computer Science student and AI systems developer at Ho Chi Minh City University of Technology (HCMUT). The site focuses on verifiable engineering work, particularly the full-stack Nova RAG workspace, alongside technical skills, education, and contact information.
 
 [Live site](https://nguyentamthang.vercel.app/) · [LinkedIn](https://www.linkedin.com/in/thangnguyen0512/) · [Facebook](https://www.facebook.com/ntt0512/)
 
@@ -100,4 +100,4 @@ The project is ready for Vercel deployment. Import the repository, add `RESEND_A
 
 - Portfolio: [nguyentamthang.vercel.app](https://nguyentamthang.vercel.app/)
 - LinkedIn: [thangnguyen0512](https://www.linkedin.com/in/thangnguyen0512/)
-- Facebook: [Nguyễn Tâm Thắng](https://www.facebook.com/ntt0512/)
+- Facebook: [Nguyen Tam Thang](https://www.facebook.com/ntt0512/)

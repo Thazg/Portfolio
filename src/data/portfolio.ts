@@ -19,9 +19,9 @@ export type PortfolioProject = {
 };
 
 export const PORTFOLIO_DATA = {
-  name: "Nguyễn Tâm Thắng",
+  name: "Nguyen Tam Thang",
   role: "Computer Science Student",
-  headline: "AI Engineering | Full Stack Development | Software Engineering",
+  headline: "AI Engineering | Machine Learning | RAG Systems",
   intro:
     "I build practical software across AI, web applications, and backend systems, turning early concepts into reliable products for real users. I enjoy solving real problems through thoughtful architecture, clean interfaces, testing, and continuous iteration.",
   about: {
@@ -105,7 +105,7 @@ export const PORTFOLIO_DATA = {
       description:
         "A responsive portfolio built to present engineering work clearly, with accessible navigation, purposeful motion, optimized media, and a validated contact workflow.",
       image: "/portfolio.png",
-      imageAlt: "Nguyễn Tâm Thắng portfolio home page",
+      imageAlt: "Nguyen Tam Thang portfolio home page",
       imageClassName: "object-cover object-top",
       tech: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS", "Framer Motion"],
       highlights: [

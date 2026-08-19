@@ -77,7 +77,7 @@ export default function Navbar() {
             className="text-lg sm:text-xl font-bold font-heading text-primary tracking-tight"
             onClick={closeMobileMenu}
           >
-            Nguyễn Tâm Thắng
+            Nguyen Tam Thang
           </NextLink>
 
           <nav className="hidden lg:flex items-center gap-6">

@@ -56,7 +56,7 @@ export default function Hero() {
             </Button>
             <Button size="lg" variant="outline" className="rounded-xl h-11 px-5 text-base font-semibold border-white/10 bg-white/5 hover:bg-white/10 backdrop-blur-md transition-all hover:-translate-y-1" asChild>
               <a href="/Nguyen-Tam-Thang-CV.pdf" target="_blank" rel="noreferrer">
-                <FileText className="mr-2 w-4 h-4" /> View My Résumé
+                <FileText className="mr-2 w-4 h-4" /> View Résumé
               </a>
             </Button>
           </div>
