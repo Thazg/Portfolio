@@ -83,8 +83,8 @@ export const PORTFOLIO_DATA = {
         "Deployed with Render, Qdrant Cloud, and Groq in a 130.5 MB Docker image within a 512 MiB memory budget",
       ],
       github: "https://github.com/Thazg/knowledge-intelligence-platform",
-      demo: "https://enterprise-kip-api.onrender.com/docs",
-      demoLabel: "API Docs",
+      demo: "https://enterprisekip.vercel.app/",
+      demoLabel: "Live Demo",
     },
     {
       title: "Nova RAG Workspace",
