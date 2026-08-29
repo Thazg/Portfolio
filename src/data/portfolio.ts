@@ -8,6 +8,7 @@ import {
 export type PortfolioProject = {
   title: string;
   version?: string;
+  hidden?: boolean;
   description: string;
   image?: string;
   imageAlt?: string;
@@ -87,6 +88,7 @@ export const PORTFOLIO_DATA = {
     },
     {
       title: "Nova RAG Workspace",
+      hidden: true,
       description:
         "A full-stack workspace for asking grounded questions about private documents, with account-isolated indexes, hybrid retrieval, source citations, and streamed responses.",
       image: "/nova-rag.png",

@@ -10,6 +10,8 @@ import { Check, ExternalLink } from "lucide-react";
 import Image from "next/image";
 
 export default function Projects() {
+  const visibleProjects = PORTFOLIO_DATA.projects.filter((project) => !project.hidden);
+
   return (
     <section id="projects" className="w-full max-w-[1200px] scroll-mt-24 px-5 pt-16 md:px-12">
       <Reveal>
@@ -22,7 +24,7 @@ export default function Projects() {
       </Reveal>
 
       <StaggerChildren className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-        {PORTFOLIO_DATA.projects.map((project) => {
+        {visibleProjects.map((project) => {
           const hasLinks = Boolean(project.github || project.demo);
 
           return (
