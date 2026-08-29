@@ -1,6 +1,6 @@
 # Nguyen Tam Thang — Portfolio
 
-Personal portfolio for Nguyen Tam Thang, a Computer Science student and AI systems developer at Ho Chi Minh City University of Technology (HCMUT). The site focuses on verifiable engineering work, particularly the full-stack Nova RAG workspace, alongside technical skills, education, and contact information.
+Personal portfolio for Nguyen Tam Thang, a Computer Science student and AI systems developer at Ho Chi Minh City University of Technology (HCMUT). The site focuses on verifiable engineering work, particularly the Enterprise Knowledge Intelligence Platform, alongside technical skills, education, and contact information.
 
 [Live site](https://nguyentamthang.vercel.app/) · [LinkedIn](https://www.linkedin.com/in/thangnguyen0512/) · [Facebook](https://www.facebook.com/ntt0512/)
 

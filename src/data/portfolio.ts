@@ -29,7 +29,7 @@ export const PORTFOLIO_DATA = {
   about: {
     bio: "I am a Computer Science student at Ho Chi Minh City University of Technology (HCMUT - VNU-HCM), focused on building reliable AI-powered software. I work across retrieval systems, backend APIs, frontend product engineering, testing, and deployment.",
     secondary:
-      "My project work includes Nova RAG and the Enterprise Knowledge Intelligence Platform, where I build citation-backed systems with hybrid retrieval, evaluation, and streamed generation. I use these projects to learn the full engineering lifecycle instead of stopping at a model demo.",
+      "Through the Enterprise Knowledge Intelligence Platform and other applied projects, I build citation-backed systems with hybrid retrieval, evaluation, and production deployment. I use each project to learn the full engineering lifecycle instead of stopping at a model demo.",
     focus: [
       "Building knowledge systems with grounded retrieval and cited generation",
       "Benchmarking retrieval quality to make measurable engineering decisions",
@@ -40,22 +40,22 @@ export const PORTFOLIO_DATA = {
     {
       category: "Retrieval & AI",
       icon: LineChart,
-      items: ["RAG", "BGE", "BM25", "Hybrid Search", "RRF", "Qdrant", "FAISS", "FastEmbed", "Retrieval Evaluation", "Groq", "Ollama"],
+      items: ["RAG", "BGE", "BM25", "Hybrid Search", "Weighted RRF", "Qdrant", "FastEmbed", "Reranking", "Multi-Query", "Retrieval Evaluation", "Groq"],
     },
     {
       category: "Backend",
       icon: Terminal,
-      items: ["Python", "FastAPI", "Pydantic", "REST APIs", "Server-Sent Events", "Authentication"],
+      items: ["Python", "FastAPI", "Pydantic", "REST APIs", "Request Validation", "API Observability"],
     },
     {
       category: "Frontend",
       icon: Database,
-      items: ["TypeScript", "React", "Next.js", "Tailwind CSS", "Zustand", "Framer Motion"],
+      items: ["TypeScript", "React", "Next.js", "Tailwind CSS", "Framer Motion"],
     },
     {
       category: "Quality & Delivery",
       icon: Settings,
-      items: ["Pytest", "Playwright", "GitHub Actions", "Docker", "Vercel", "Render"],
+      items: ["Pytest", "Playwright", "GitHub Actions", "Docker", "Prometheus", "Vercel", "Render"],
     },
   ],
   certificates: [
