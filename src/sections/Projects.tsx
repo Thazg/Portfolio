@@ -58,6 +58,24 @@ export default function Projects() {
                     {project.description}
                   </p>
 
+                  {project.metrics && (
+                    <dl className="grid grid-cols-3 gap-x-3 gap-y-4 rounded-lg bg-background/55 p-3.5">
+                      {project.metrics.map((metric) => (
+                        <div key={metric.label} className="flex min-w-0 flex-col">
+                          <dt className="order-2 mt-1 text-[13px] font-semibold text-foreground/90">
+                            {metric.label}
+                          </dt>
+                          <dd className={`order-1 font-heading font-semibold tracking-tight text-foreground tabular-nums ${metric.value.length > 10 ? "text-base leading-tight sm:text-lg" : "text-xl sm:text-2xl"}`}>
+                            {metric.value}
+                          </dd>
+                          <dd className="order-3 mt-1 text-[13px] leading-relaxed text-muted-foreground">
+                            {metric.context}
+                          </dd>
+                        </div>
+                      ))}
+                    </dl>
+                  )}
+
                   <ul className="space-y-2.5">
                     {project.highlights.map((highlight) => (
                       <li key={highlight} className="flex gap-2.5 text-sm leading-relaxed text-foreground/85">
@@ -66,6 +84,12 @@ export default function Projects() {
                       </li>
                     ))}
                   </ul>
+
+                  {project.note && (
+                    <p className="text-xs leading-relaxed text-muted-foreground">
+                      {project.note}
+                    </p>
+                  )}
 
                   <div className="mt-auto flex flex-wrap gap-2">
                     {project.tech.map((tech) => (

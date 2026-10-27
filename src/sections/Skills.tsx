@@ -15,7 +15,7 @@ export default function Skills() {
           </h2>
           <div className="w-20 h-1.5 bg-primary rounded-full mb-5" />
           <p className="text-base text-muted-foreground max-w-3xl">
-            Technologies I use in the projects shown below, grouped by the part of the system they support.
+            Tools and methods implemented or evaluated in the featured projects, from retrieval and recommendation to data, APIs, and delivery.
           </p>
         </div>
       </Reveal>
@@ -65,38 +65,38 @@ export default function Skills() {
             {PORTFOLIO_DATA.certificates.map((certificate) => (
               <div
                 key={certificate.name}
-                className="flex items-center gap-4 rounded-2xl border border-border/50 bg-card/40 p-4 transition-colors hover:border-primary/50 sm:p-5"
+                className="@container rounded-2xl border border-border/50 bg-card/40 p-4 transition-colors hover:border-primary/50 sm:p-5"
               >
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                  <Award className="h-6 w-6" aria-hidden="true" />
-                </div>
+                <div className="flex min-w-0 flex-col gap-5 @sm:flex-row @sm:items-center">
+                  <div className="flex min-w-0 flex-1 items-center gap-4">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                      <Award className="h-6 w-6" aria-hidden="true" />
+                    </div>
 
-                <div className="min-w-0 flex-1">
-                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground">
-                    {certificate.category}
-                  </p>
-                  <h4 className="mt-1 font-heading text-lg font-bold text-foreground">
-                    {certificate.name}
-                  </h4>
-                </div>
+                    <div className="min-w-0">
+                      <p className="break-words text-sm font-medium leading-snug text-muted-foreground">
+                        {certificate.category}
+                      </p>
+                      <h4 className="mt-1 break-words font-heading text-lg font-bold text-foreground">
+                        {certificate.name}
+                      </h4>
+                    </div>
+                  </div>
 
-                <div className="grid shrink-0 grid-cols-2 divide-x divide-border/70 text-center">
-                  <div className="px-3">
-                    <span className="block font-heading text-xl font-bold text-primary">
-                      {certificate.score}
-                    </span>
-                    <span className="mt-0.5 block text-[0.65rem] font-medium uppercase tracking-wider text-muted-foreground">
-                      Overall
-                    </span>
-                  </div>
-                  <div className="px-3">
-                    <span className="block font-heading text-base font-bold text-foreground">
-                      {certificate.level.replace("CEFR ", "")}
-                    </span>
-                    <span className="mt-1 block text-[0.65rem] font-medium uppercase tracking-wider text-muted-foreground">
-                      CEFR
-                    </span>
-                  </div>
+                  <dl className="grid min-w-0 grid-cols-2 gap-4 text-center @sm:shrink-0 @sm:gap-6">
+                    <div className="flex flex-col">
+                      <dt className="order-2 mt-1 text-sm text-muted-foreground">Overall</dt>
+                      <dd className="order-1 font-heading text-2xl font-bold text-primary">
+                        {certificate.score}
+                      </dd>
+                    </div>
+                    <div className="flex flex-col">
+                      <dt className="order-2 mt-1 text-sm text-muted-foreground">CEFR</dt>
+                      <dd className="order-1 font-heading text-2xl font-bold text-foreground">
+                        {certificate.level.replace("CEFR ", "")}
+                      </dd>
+                    </div>
+                  </dl>
                 </div>
               </div>
             ))}
