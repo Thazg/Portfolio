@@ -8,19 +8,19 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section id="home" className="relative flex w-full max-w-[1100px] scroll-mt-24 items-center justify-center overflow-hidden px-5 pb-0 pt-28 md:px-8 md:pt-32">
+    <section id="home" className="relative flex w-full max-w-[1200px] scroll-mt-24 items-center justify-center overflow-hidden px-5 pb-0 pt-28 md:px-12 md:pt-32">
       {/* Keep the ambient light on the copy side so the portrait edge stays clean. */}
       <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[#60A5FA]/[0.03] rounded-full blur-[100px] -z-10" />
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center w-full">
+      <div className="grid w-full grid-cols-1 items-center gap-8 md:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] lg:grid-cols-12 lg:gap-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="flex flex-col lg:col-span-7 z-10 space-y-5"
+          className="flex flex-col text-left lg:col-span-7 z-10 space-y-5"
         >
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-secondary/60 border border-white/5 text-xs font-semibold text-[#60A5FA] w-fit backdrop-blur-md">
-            <span className="relative flex h-2 w-2 mr-3">
+            <span className="relative mr-3 flex h-2 w-2 shrink-0">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#60A5FA] opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-[#60A5FA]"></span>
             </span>
@@ -31,7 +31,7 @@ export default function Hero() {
             <span className="text-lg md:text-xl text-muted-foreground font-medium tracking-wide">
               Hi, I&apos;m
             </span>
-            <h1 className="text-4xl md:text-[4.5rem] lg:text-[5.5rem] font-bold font-heading leading-[1.05] tracking-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-[5.5rem] font-bold font-heading leading-[1.05] tracking-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#60A5FA] to-[#7C3AED]">
                 {PORTFOLIO_DATA.name}
               </span>
@@ -43,7 +43,7 @@ export default function Hero() {
               {PORTFOLIO_DATA.role}
             </p>
 
-            <p className="max-w-[34rem] text-justify text-base font-medium leading-relaxed text-muted-foreground">
+            <p className="max-w-[34rem] text-left text-base font-medium leading-7 text-muted-foreground">
               {PORTFOLIO_DATA.intro}
             </p>
           </div>
@@ -66,17 +66,17 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-          className="relative flex justify-center lg:justify-end lg:col-span-5"
+          className="relative flex min-w-0 justify-center md:justify-end lg:col-span-5"
         >
           {/* Personal Image */}
-          <div className="relative w-full max-w-[350px] aspect-square">
+          <div className="relative aspect-[3/4] w-full max-w-[350px] md:max-w-[280px] lg:max-w-[350px]">
             <div className="absolute inset-0 rounded-[2rem] bg-card/40 border border-white/10 shadow-2xl overflow-hidden p-2">
               <div className="relative w-full h-full rounded-[1.5rem] overflow-hidden bg-gradient-to-tr from-white/5 to-white/10">
                 <Image
-                  src="/profile.png"
+                  src="/profile-white.webp"
                   alt="Nguyen Tam Thang"
                   fill
-                  sizes="(max-width: 1024px) 350px, 30vw"
+                  sizes="(min-width: 1024px) 350px, (min-width: 768px) 280px, (max-width: 389px) calc(100vw - 40px), 350px"
                   className="object-cover hover:scale-105 transition-transform duration-700 ease-in-out"
                   priority
                 />

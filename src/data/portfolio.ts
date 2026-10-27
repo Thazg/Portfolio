@@ -2,7 +2,7 @@ import {
   Database,
   LineChart,
   Settings,
-  Terminal,
+  Code2,
 } from "lucide-react";
 
 export type PortfolioProject = {
@@ -25,39 +25,48 @@ export type PortfolioProject = {
 export const PORTFOLIO_DATA = {
   name: "Nguyen Tam Thang",
   role: "Computer Science Student",
-  headline: "AI Engineering | Machine Learning | RAG Systems",
+  headline: "AI Engineering | Retrieval & Recommendations",
   intro:
-    "I build practical AI systems with a focus on retrieval, evaluation, and reliable deployment. I enjoy experimenting with different approaches, measuring what works, and turning those experiments into usable applications.",
+    "I build AI applications around retrieval, recommendation, and measurable evaluation. My work connects data preparation and model experiments with backend APIs and usable interfaces.",
   about: {
-    bio: "I am a Computer Science student at Ho Chi Minh City University of Technology (HCMUT - VNU-HCM), focused on building reliable AI-powered software. I work across retrieval systems, backend APIs, frontend product engineering, testing, and deployment.",
+    bio: "I'm a Computer Science student at Ho Chi Minh City University of Technology (HCMUT – VNU-HCM), working toward a career in AI Engineering. I focus on how data, models, and software fit together in a usable system.",
     secondary:
-      "Through the Enterprise Knowledge Intelligence Platform and other applied projects, I build citation-backed systems with hybrid retrieval, evaluation, and production deployment. I use each project to learn the full engineering lifecycle instead of stopping at a model demo.",
+      "I compare simple baselines before adding complexity, keep evaluation protocols explicit, and carry models through packaging, API serving, testing, and deployment. I care about reproducible results and explaining where a system still falls short.",
     focus: [
-      "Building knowledge systems with grounded retrieval and cited generation",
-      "Benchmarking retrieval quality to make measurable engineering decisions",
-      "Shipping reliable AI products with robust APIs, observability, testing, and deployment",
+      {
+        title: "Retrieval & recommendations",
+        description: "Developing candidate retrieval, ranking, and grounded document search, with clear comparisons against simpler baselines.",
+      },
+      {
+        title: "Evaluation & reproducibility",
+        description: "Using temporal splits, explicit metrics, and versioned artifacts to make experiments repeatable and their limits visible.",
+      },
+      {
+        title: "Serving & reliability",
+        description: "Packaging model state, defining API contracts, and testing failure, recovery, and resource boundaries.",
+      },
     ],
   },
   skills: [
     {
-      category: "Retrieval & AI",
+      category: "ML & Retrieval",
       icon: LineChart,
-      items: ["RAG", "BGE", "BM25", "Hybrid Search", "Weighted RRF", "Qdrant", "FastEmbed", "Reranking", "Multi-Query", "Retrieval Evaluation", "Groq"],
+      items: ["RAG", "BM25", "Dense Embeddings", "RRF", "ItemKNN", "Implicit ALS", "Learning to Rank", "PyTorch"],
     },
     {
-      category: "Backend",
-      icon: Terminal,
-      items: ["Python", "FastAPI", "Pydantic", "REST APIs", "Request Validation", "API Observability"],
+      category: "Data & Backend",
+      icon: Database,
+      items: ["Python", "NumPy", "Pandas", "FastAPI", "Pydantic", "REST APIs", "SSE", "Model Artifacts"],
     },
     {
       category: "Frontend",
-      icon: Database,
-      items: ["TypeScript", "React", "Next.js", "Tailwind CSS", "Framer Motion"],
+      icon: Code2,
+      items: ["TypeScript", "React", "Next.js", "Tailwind CSS", "Zustand", "Framer Motion"],
     },
     {
       category: "Quality & Delivery",
       icon: Settings,
-      items: ["Pytest", "Playwright", "GitHub Actions", "Docker", "Prometheus", "Vercel", "Render"],
+      items: ["Temporal Evaluation", "Pytest", "Playwright", "GitHub Actions", "Docker", "Prometheus", "Vercel", "Render"],
     },
   ],
   certificates: [
